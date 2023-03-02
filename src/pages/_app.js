@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+
 import '@/styles/globals.css'
 
 import { Baloo_2 } from 'next/font/google'
@@ -13,6 +15,7 @@ export default function App({ Component, pageProps }) {
         }
       `}</style>
       <Component {...pageProps} />
+      <Analytics />
     </>
   )
 }
