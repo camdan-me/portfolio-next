@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 import Head from 'next/head'
 import Image from 'next/image'
 
@@ -5,16 +7,104 @@ import UniversalHead from '../components/UniversalHead.js'
 
 import logo from '../../public/assets/img/transparent-logo.png'
 
+const quoteArray = [
+  'What\'s beautiful about the internet is you don\'t know who I am and I don\'t know either.',
+  'Oh, so you\'re a node dev, huh? List every NPM package.',
+  'WHICH TAB IS THAT MUSIC COMING FROM?!?!',
+  'I know for a *fact* that all of my parentheses are in the righ- oh wait, found the problem.',
+  'I\'m not antisocial, I\'m just not user friendly.',
+  'while :; do rm -rf node_modules && npm install; done;',
+  'Roses are red, violets are blue, unexpected { on line 232.',
+  'I\'m not a robot, I\'m a human.',
+  'Turns out that if you don\\\'t escape these quotes properly it breaks the whole website.',
+  'Very decent.',
+  'So the difference between a T-stop and an F-stop is... ok you left.',
+  'They say code never lies but mine sure seems to.',
+  'Am I the only one who looks both ways before crossing a one-way street?',
+  'Debugging feels like trying to find a piece of hay in a stack of needles. Except the piece of hay is invisible and sometimes the stack of needles pretends to be a stack of hay.',
+  'Debugging makes me feel like I\'m a detective when really I\'m the murderer.',
+  'I don\'t always test my code, but when I do, I test it here. That\'s why undefinedundefinedundefined.',
+  'I love the whooshing sound deadlines make when they go by.',
+  'It\'s not a mistake, it\'s a surprise feature.',
+  'A good story is always the best special effect. Unless you have car chases or explosions. At least according to Marvel.',
+  'Filmmaking is the art of cutting just before something funny happens.',
+  'Why does it feel like every time I go to build a camera half the parts are missing and the other half are in a box labeled "Misc".',
+  'It\'s not a mistake if you do it twice.',
+  'Testing in production is fun! It\'s like solving a puzzle, except the puzzle is on fire.',
+  'If you don\'t write your code in comic sans I don\'t know if we can be friends anymore.',
+  'When we\'re older are we gonna be telling our kids about how we used to gaslight ChatGPT?'
+];
+
+const selectQuote = () => quoteArray[Math.floor(Math.random() * quoteArray.length)];
+
+const sleep = (ms) => { return new Promise(resolve => setTimeout(resolve, ms)) };
+
 export default function Home() {
+  const [fullQuote, setFullQuote] = useState(selectQuote());
+  const [quote, setQuote] = useState('');
+  const [index, setIndex] = useState(0);
+
+  const [tick, setTick] = useState(0);
+
+  const quoteClick = () => {
+    setQuote('');
+    setIndex(0);
+    setFullQuote(selectQuote());
+  };
+
+  useEffect(() => {
+    if (index !== fullQuote.length) {
+      setTimeout(() => {
+        if (tick >= 4) {
+          setQuote(quote + fullQuote[index]);
+          setIndex(index + 1);
+        }
+      }, 40)
+    }
+  }, [index, quote, fullQuote, tick]);
+
+  useEffect(() => {
+    (async () => {
+      if (tick !== 0) return;
+
+      await sleep(500);
+      setTick(1);
+      await sleep(3000);
+      setTick(2);
+      await sleep(1300);
+      setTick(3);
+      await sleep(100);
+      setTick(4);
+      await sleep(1000);
+      setTick(5);
+    })();
+  }, [tick]);
+
   return (
     <>
       <Head>
-        <UniversalHead description="This is a test description!" />
+        <UniversalHead description="I like to make technology do cool stuff. I'm particularly good at fixing things that are broken. Sometimes I make websites, music, videos, music videos, cool lights, or concerts." />
 
-        <title>Test Title</title>
+        <title>Camdan Mead</title>
       </Head>
 
-      <main className="overflow-x-hidden bg-gray-500 bg-circuit">
+      <section className={`${tick >= 3 ? 'hidden' : 'flex'} transition-all duration-1000 items-center justify-center w-screen h-screen bg-gray-500`}>
+        <Image src={logo} alt="" className={`${tick < 1 && 'scale-0'} z-50 transition-all duration-500 fixed h-[250px] w-[250px]`} />
+
+        <div className={`${tick >= 1 ? 'border-[500px]' : 'border-[0px]'} transition-all duration-1000 border-yellow-500 rounded-full fixed`}></div>
+        <div className={`${tick >= 1 ? 'border-[500px]' : 'border-[0px]'} transition-all duration-[1500ms] border-red-500 rounded-full fixed`}></div>
+        <div className={`${tick >= 1 ? 'border-[500px]' : 'border-[0px]'} transition-all duration-[2000ms] border-blue-500 rounded-full fixed`}></div>
+        <div className={`${tick >= 1 ? 'border-[550px]' : 'border-[0px]'} transition-all duration-[2500ms] border-gray-500 rounded-full fixed`}></div>
+
+        <div className={`${tick >= 2 ? 'h-full' : 'h-0'} fixed z-50 w-full transition-all duration-1000 bg-yellow-500`}></div>
+        <div className={`${tick >= 2 ? 'h-full' : 'h-0'} fixed z-50 w-full transition-all duration-1000 delay-100 bg-red-500`}></div>
+        <div className={`${tick >= 2 ? 'h-full' : 'h-0'} fixed z-50 w-full transition-all duration-1000 delay-200 bg-blue-500`}></div>
+        <div className={`${tick >= 2 ? 'h-full' : 'h-0'} fixed z-50 w-full transition-all duration-1000 delay-300 bg-gray-500`}></div>
+      </section>
+
+      <main className={`${tick < 3 && 'hidden'} overflow-x-hidden bg-gray-500 bg-circuit`}>
+        <div className={`${tick >= 4 ? 'opacity-0' : 'opacity-100'} ${tick >= 5 && 'hidden'} fixed z-50 w-screen h-screen bg-gray-500 transition-all duration-1000`}></div>
+
         <section className="flex flex-col items-center justify-center w-screen h-screen">
           <div className="flex flex-row items-center mx-4">
             <Image src={logo} className="w-16 h-16 sm:w-32 sm:h-32" alt="C Logo" />
@@ -23,15 +113,18 @@ export default function Home() {
                 Hi! My name is Camdan.
               </h1>
               <h2 className="mt-2 font-medium text-white text-m sm:text-xl">
-                I&apos;m a high school student, filmmaker, and full-stack developer from the US<br />with a website that I&apos;m still getting around to finishing. You can reach me at <a href="mailto:hello@camdan.me">hello@camdan.me</a>
+                I like to make technology do cool stuff. I&apos;m particularly good at fixing things that are broken.
+                <span className="hidden sm:flex">
+                  Sometimes I make websites, music, videos, music videos, cool lights, or concerts.
+                </span>
               </h2>
             </div>
           </div>
 
-          <div className="flex flex-row items-center mb-[20%] mt-4 mx-8 bg-white rounded-lg shadow-lg p-4">
+          <div onClick={() => quoteClick()} className="flex flex-row items-center mb-[20%] mt-4 mx-8 bg-white rounded-lg shadow-lg p-4 cursor-pointer">
             <p>
-              <span id="quote" className="font-semibold text-gray-600 text-m">&quot;&quot;</span>
-              <span className="text-sm font-medium text-gray-300">— Cam</span>
+              <span className="font-semibold text-gray-600 text-m">&quot;{quote}&quot;</span>
+              <span className="text-sm font-medium text-gray-300">- Cam</span>
             </p>
           </div>
 
