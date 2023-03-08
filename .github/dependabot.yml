@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    reviewers:
+      - "camdan-me"
+    assignees:
+      - "camdan-me"
+    open-pull-requests-limit: 1
+    commit-message:
+      prefix: "⬆️"
