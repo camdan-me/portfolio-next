@@ -1,0 +1,18 @@
+name: Retarget Dependabot PRs
+
+on:
+  pull_request_target:
+    types: [opened, edited]
+
+jobs:
+  check-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Vankka/pr-target-branch-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          target: main
+          exclude: development
+          change-to: development
+          comment: PR retargeted to development.
