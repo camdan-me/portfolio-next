@@ -10,7 +10,7 @@ export default function Navbar() {
 
 	return (
 		<>
-			<div className="absolute z-40 flex flex-row items-center justify-center p-4 text-2xl font-black text-gray-500 bg-white shadow-lg rounded-xl bottom-4 left-4">
+			<div className="absolute z-40 flex-row items-center justify-center hidden p-4 text-2xl font-black text-gray-500 bg-white shadow-lg sm:flex rounded-xl bottom-4 left-4">
 				<Link href="/?skipanimation"><Image src={logo} className="w-12 h-12 mr-2" alt="C Logo" /></Link>
 				<Link href="/about" className={`${router.asPath.startsWith('/about') ? 'text-gray-100 cursor-default' : 'link-underline'} mx-2`}>About</Link>
 				<Link href="/projects" className={`${router.asPath.startsWith('/projects') ? 'text-gray-100 cursor-default' : 'link-underline'} mx-2`}>Projects</Link>
