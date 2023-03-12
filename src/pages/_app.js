@@ -1,10 +1,10 @@
 import { Analytics } from '@vercel/analytics/react';
 
-import '@/styles/globals.css'
+import '@/styles/globals.css';
 
-import { Baloo_2 } from 'next/font/google'
+import { Baloo_2 } from 'next/font/google';
 
-const baloo = Baloo_2({ subsets: ['latin'] })
+const baloo = Baloo_2({ subsets: ['latin'] });
 
 export default function App({ Component, pageProps }) {
   return (
@@ -17,5 +17,5 @@ export default function App({ Component, pageProps }) {
       <Component {...pageProps} />
       <Analytics />
     </>
-  )
+  );
 }
