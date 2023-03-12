@@ -1,17 +1,21 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from 'next/head';
+import Image from 'next/image';
 
-import UniversalHead from '../components/UniversalHead.js'
+import UniversalHead from '../components/UniversalHead.js';
 
-import logo from '../../public/assets/img/transparent-logo.png'
+import logo from '../../public/assets/img/transparent-logo.png';
 
 import quoteArray from '../../resources/quotes.json';
 
-const selectQuote = () => quoteArray.quotes[Math.floor(Math.random() * quoteArray.quotes.length)];
+const selectQuote = () => { return quoteArray.quotes[Math.floor(Math.random() * quoteArray.quotes.length)]; };
 
-const sleep = (ms) => { return new Promise(resolve => setTimeout(resolve, ms)) };
+const sleep = (ms) => {
+  return new Promise((resolve) => {
+    return setTimeout(resolve, ms);
+  });
+};
 
 export default function Home() {
   const [fullQuote, setFullQuote] = useState(selectQuote());
@@ -34,7 +38,7 @@ export default function Home() {
           setQuote(quote + fullQuote[index]);
           setIndex(index + 1);
         }
-      }, 40)
+      }, 40);
     }
   }, [index, quote, fullQuote, tick]);
 
@@ -94,7 +98,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div onClick={() => quoteClick()} className="flex flex-row items-center mb-[20%] mt-4 mx-8 bg-white rounded-lg shadow-lg p-4 cursor-pointer">
+        <div onClick={() => { return quoteClick(); }} className="flex flex-row items-center mb-[20%] mt-4 mx-8 bg-white rounded-lg shadow-lg p-4 cursor-pointer">
           <p>
             <span className="font-semibold text-gray-600 text-m">&quot;{quote}&quot;</span>
             <span className="text-sm font-medium text-gray-300">- Cam</span>
@@ -125,5 +129,5 @@ export default function Home() {
         </svg>
       </main>
     </>
-  )
+  );
 }

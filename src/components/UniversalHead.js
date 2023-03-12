@@ -21,5 +21,5 @@ export default function UniversalHead(props) {
 
 			<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2e4057" />
 		</>
-	)
+	);
 }
