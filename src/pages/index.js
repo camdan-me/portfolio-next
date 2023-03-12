@@ -3,9 +3,9 @@ import { useRouter } from 'next/router';
 
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 
 import UniversalHead from '../components/UniversalHead.js';
+import Navbar from '../components/Navbar.js';
 
 import logo from '../../public/assets/img/transparent-logo.png';
 
@@ -90,6 +90,8 @@ export default function Home() {
       </div>
 
       <main className={`${tick < 3 && 'hidden'} overflow-x-hidden bg-gray-500 bg-circuit flex flex-col items-center justify-center w-screen h-screen`}>
+        <Navbar />
+
         <div className={`${tick >= 4 ? 'opacity-0' : 'opacity-100'} ${tick >= 5 && 'hidden'} fixed z-50 w-screen h-screen bg-gray-500 transition-all duration-1000`}></div>
 
         <div className="flex flex-row items-center mx-4">
@@ -112,14 +114,6 @@ export default function Home() {
             <span className="font-semibold text-white text-m">&quot;{quote}&quot;</span>
             <span className="text-sm font-medium text-gray-100">- Cam</span>
           </p>
-        </div>
-
-        <div className="absolute z-40 flex flex-row items-center justify-center p-4 text-2xl font-black text-gray-500 bg-white shadow-lg rounded-xl bottom-4 left-4">
-          <Image src={logo} className="w-12 h-12 mr-2" alt="C Logo" />
-          <Link href="/about" className="mx-2 link-underline">About</Link>
-          <Link href="/projects" className="mx-2 link-underline">Projects</Link>
-          <Link href="/contact" className="mx-2 link-underline">Contact</Link>
-          <Link href="/resume" className="mx-2 link-underline">Resume</Link>
         </div>
 
         <svg className="absolute bottom-0 w-screen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 400">
