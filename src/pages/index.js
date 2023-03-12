@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import UniversalHead from '../components/UniversalHead.js';
 
@@ -22,6 +24,8 @@ export default function Home() {
   const [quote, setQuote] = useState('');
   const [index, setIndex] = useState(0);
   const [tick, setTick] = useState(0);
+
+  const router = useRouter();
 
   const quoteClick = () => {
     if (index !== fullQuote.length) return;
@@ -46,18 +50,23 @@ export default function Home() {
     (async () => {
       if (tick !== 0) return;
 
+      if (router.asPath === '/?skipanimation') return setTick(5);
+
       await sleep(500);
       setTick(1); // Reveal C
       await sleep(3000);
       setTick(2); // Expand Lines
       await sleep(1300);
       setTick(3); // Remove Overlay
+
+      router.push('/?skipanimation', undefined, { shallow: true });
+
       await sleep(100);
       setTick(4); // Fade in Content
       await sleep(1000);
       setTick(5); // Enable Cursor
     })();
-  }, [tick]);
+  }, [router, tick]);
 
   return (
     <>
@@ -98,19 +107,20 @@ export default function Home() {
           </div>
         </div>
 
-        <div onClick={() => { return quoteClick(); }} className="flex flex-row items-center mb-[20%] mt-4 mx-8 bg-white rounded-lg shadow-lg p-4 cursor-pointer">
+        <div onClick={() => { return quoteClick(); }} className={`${(index === fullQuote.length) && 'cursor-pointer'} flex flex-row items-center mb-[20%] mt-4 mx-8 bg-gray-600 rounded-lg p-4`}>
           <p>
-            <span className="font-semibold text-gray-600 text-m">&quot;{quote}&quot;</span>
-            <span className="text-sm font-medium text-gray-300">- Cam</span>
+            <span className="font-semibold text-white text-m">&quot;{quote}&quot;</span>
+            <span className="text-sm font-medium text-gray-100">- Cam</span>
           </p>
         </div>
 
-        <svg className="z-40 w-16 h-16 text-white bottom-4 animate-bounce" width="24" height="24" viewBox="0 0 24 24"
-          strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" />
-          <rect x="7" y="4" width="10" height="16" rx="4" />
-          <line x1="12" y1="8" x2="12" y2="11" />
-        </svg>
+        <div className="absolute z-40 flex flex-row items-center justify-center p-4 text-2xl font-black text-gray-500 bg-white shadow-lg rounded-xl bottom-4 left-4">
+          <Image src={logo} className="w-12 h-12 mr-2" alt="C Logo" />
+          <Link href="/about" className="mx-2 link-underline">About</Link>
+          <Link href="/projects" className="mx-2 link-underline">Projects</Link>
+          <Link href="/contact" className="mx-2 link-underline">Contact</Link>
+          <Link href="/resume" className="mx-2 link-underline">Resume</Link>
+        </div>
 
         <svg className="absolute bottom-0 w-screen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 400">
           <path fill="#2AB7CA" fillOpacity="1"
