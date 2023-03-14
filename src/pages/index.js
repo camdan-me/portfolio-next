@@ -50,7 +50,7 @@ export default function Home() {
     (async () => {
       if (tick !== 0) return;
 
-      if (router.asPath === '/?skipanimation') return setTick(5);
+      if (router.asPath.startsWith('/?skipanimation')) return setTick(5);
 
       await sleep(500);
       setTick(1); // Reveal C
@@ -89,7 +89,7 @@ export default function Home() {
         <div className={`${tick >= 2 ? 'h-full' : 'h-0'} fixed z-50 w-full transition-all duration-1000 delay-300 bg-gray-500`}></div>
       </div>
 
-      <main className={`${tick < 3 && 'hidden'} overflow-x-hidden bg-gray-500 bg-circuit flex flex-col items-center justify-center w-screen h-screen`}>
+      <main className={`${tick < 3 && 'hidden'} overflow-hidden bg-gray-500 bg-circuit flex flex-col items-center justify-center w-screen h-screen`}>
         <Navbar />
 
         <div className={`${tick >= 4 ? 'opacity-0' : 'opacity-100'} ${tick >= 5 && 'hidden'} fixed z-50 w-screen h-screen bg-gray-500 transition-all duration-1000`}></div>
@@ -110,9 +110,8 @@ export default function Home() {
         </div>
 
         <div onClick={() => { return quoteClick(); }} className={`${(index === fullQuote.length) && 'cursor-pointer'} flex flex-row items-center mb-[20%] mt-4 mx-8 bg-gray-600 rounded-lg p-4`}>
-          <p>
-            <span className="font-semibold text-white text-m">&quot;{quote}&quot;</span>
-            <span className="text-sm font-medium text-gray-100">- Cam</span>
+          <p className="font-semibold text-white text-m">
+            &quot;{quote}&quot;
           </p>
         </div>
 
