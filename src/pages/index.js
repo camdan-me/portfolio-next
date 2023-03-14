@@ -50,7 +50,7 @@ export default function Home() {
     (async () => {
       if (tick !== 0) return;
 
-      if (router.asPath === '/?skipanimation') return setTick(5);
+      if (router.asPath.startsWith('/?skipanimation')) return setTick(5);
 
       await sleep(500);
       setTick(1); // Reveal C
