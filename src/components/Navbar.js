@@ -18,6 +18,10 @@ export default function Navbar() {
 				<Link href="/contact" className={`${router.asPath.startsWith('/contact') ? 'text-blue-500 cursor-default' : 'link-underline'} mx-2`}>Contact</Link>
 				{/* <Link href="/resume" className={`${router.asPath.startsWith('/resume') ? 'text-red-500 cursor-default' : 'link-underline'} mx-2`}>Resume</Link> */}
 			</div>
+
+			<div className="fixed z-50 items-center justify-center hidden w-screen h-screen p-4 font-black text-center text-white bg-gray-500 tiny:flex">
+				<h1>Oops! Looks like your viewport is too small to properly display my website. Please use a larger window or screen.</h1>
+			</div>
 		</>
 	);
 }
