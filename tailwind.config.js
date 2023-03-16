@@ -80,7 +80,12 @@ module.exports = {
         900: '#3C303F',
       },
     },
-    extend: {},
+    extend: {
+      screens: {
+        'wide': { 'raw': '(min-aspect-ratio: 3/1)' },
+        'tiny': { 'raw': '(max-width: 500px) and (max-height: 400px)' },
+      },
+    },
   },
   plugins: [],
 };
