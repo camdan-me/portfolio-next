@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Update NPM
+        run: npm install -g npm@latest
       - name: Install Modules
         run: npm i
       - name: Run ESLint
