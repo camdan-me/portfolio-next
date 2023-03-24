@@ -74,7 +74,7 @@ export default function Home() {
         <title>Camdan Mead</title>
       </Head>
 
-      <div className={`${tick >= 3 ? 'hidden' : 'flex'} transition-all duration-1000 items-center justify-center w-screen h-screen bg-gray-500`}>
+      <div className={`${tick >= 3 ? 'hidden' : 'flex'} fixed z-40 transition-all duration-1000 items-center justify-center w-screen h-screen bg-gray-500`}>
         <Image src={logo} alt="" className={`${tick < 1 && 'scale-0'} z-50 transition-all duration-500 fixed h-[250px] w-[250px]`} />
 
         <div className={`${tick >= 1 ? 'border-[500px]' : 'border-[0px]'} transition-all duration-1000 border-yellow-500 rounded-full fixed`}></div>
