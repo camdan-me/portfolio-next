@@ -55,8 +55,8 @@ export default function App({ Component, pageProps }) {
       })}>
         <div
           className={cn({
-            'animate-slideUpEnter': !transitioning,
-            'animate-slideUpLeave': transitioning,
+            'animate-animateEnter': !transitioning,
+            'animate-animateExit': transitioning,
           })}
         >
           <Screen {...pageProps} />

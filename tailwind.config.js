@@ -86,30 +86,26 @@ module.exports = {
         'tiny': { 'raw': '(max-width: 500px) and (max-height: 400px)' },
       },
       keyframes: {
-        slideUpEnter: {
+        animateEnter: {
           '0%': {
             opacity: 0,
-            transform: 'translateY(20px)',
           },
           '100%': {
             opacity: 100,
-            transform: 'translateY(0px)',
           },
         },
-        slideUpLeave: {
+        animateExit: {
           '0%': {
             opacity: 100,
-            transform: 'translateY(0)',
           },
           '100%': {
             opacity: 0,
-            transform: 'translateY(20px)',
           },
         },
       },
       animation: {
-        slideUpEnter: 'slideUpEnter .3s ease-in-out',
-        slideUpLeave: 'slideUpLeave .3s ease-in-out',
+        animateEnter: 'animateEnter .3s ease-in-out',
+        animateExit: 'animateExit .3s ease-in-out',
       },
     },
   },
