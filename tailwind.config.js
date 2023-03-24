@@ -85,6 +85,28 @@ module.exports = {
         'wide': { 'raw': '(min-aspect-ratio: 3/1)' },
         'tiny': { 'raw': '(max-width: 500px) and (max-height: 400px)' },
       },
+      keyframes: {
+        animateEnter: {
+          '0%': {
+            opacity: 0,
+          },
+          '100%': {
+            opacity: 100,
+          },
+        },
+        animateExit: {
+          '0%': {
+            opacity: 100,
+          },
+          '100%': {
+            opacity: 0,
+          },
+        },
+      },
+      animation: {
+        animateEnter: 'animateEnter .3s ease-in-out',
+        animateExit: 'animateExit .3s ease-in-out',
+      },
     },
   },
   plugins: [],

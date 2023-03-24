@@ -5,7 +5,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import UniversalHead from '../components/UniversalHead.js';
-import Navbar from '../components/Navbar.js';
 
 import logo from '../../public/assets/img/transparent-logo.png';
 
@@ -75,7 +74,7 @@ export default function Home() {
         <title>Camdan Mead</title>
       </Head>
 
-      <div className={`${tick >= 3 ? 'hidden' : 'flex'} transition-all duration-1000 items-center justify-center w-screen h-screen bg-gray-500`}>
+      <div className={`${tick >= 3 ? 'hidden' : 'flex'} fixed z-40 transition-all duration-1000 items-center justify-center w-screen h-screen bg-gray-500`}>
         <Image src={logo} alt="" className={`${tick < 1 && 'scale-0'} z-50 transition-all duration-500 fixed h-[250px] w-[250px]`} />
 
         <div className={`${tick >= 1 ? 'border-[500px]' : 'border-[0px]'} transition-all duration-1000 border-yellow-500 rounded-full fixed`}></div>
@@ -90,8 +89,6 @@ export default function Home() {
       </div>
 
       <main className={`${tick < 3 && 'hidden'} overflow-hidden bg-gray-500 bg-circuit flex flex-col items-center justify-center w-screen h-screen`}>
-        <Navbar />
-
         <div className={`${tick >= 4 ? 'opacity-0' : 'opacity-100'} ${tick >= 5 && 'hidden'} fixed z-50 w-screen h-screen bg-gray-500 transition-all duration-1000`}></div>
 
         <div className="z-10 flex flex-row items-center mx-4">
