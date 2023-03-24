@@ -85,6 +85,32 @@ module.exports = {
         'wide': { 'raw': '(min-aspect-ratio: 3/1)' },
         'tiny': { 'raw': '(max-width: 500px) and (max-height: 400px)' },
       },
+      keyframes: {
+        slideUpEnter: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateY(20px)',
+          },
+          '100%': {
+            opacity: 100,
+            transform: 'translateY(0px)',
+          },
+        },
+        slideUpLeave: {
+          '0%': {
+            opacity: 100,
+            transform: 'translateY(0)',
+          },
+          '100%': {
+            opacity: 0,
+            transform: 'translateY(20px)',
+          },
+        },
+      },
+      animation: {
+        slideUpEnter: 'slideUpEnter .3s ease-in-out',
+        slideUpLeave: 'slideUpLeave .3s ease-in-out',
+      },
     },
   },
   plugins: [],
