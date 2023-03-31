@@ -10,14 +10,14 @@ export default function Navbar() {
 
 	return (
 		<>
-			<div className="absolute z-30 flex flex-row items-center justify-center p-4 font-black text-white text-l sm:text-2xl top-4 left-4">
+			<nav className="absolute z-30 flex flex-row items-center justify-center p-4 font-black text-white text-l sm:text-2xl top-4 left-4">
 				<Link href="/?skipanimation" className="hidden sm:flex"><Image src={logo} className="w-12 h-12 mr-2" alt="C Logo" /></Link>
 				<Link href="/?skipanimation" className="mx-2 link-underline sm:hidden">Home</Link>
 				<Link href="/about" className={`${router.asPath.startsWith('/about') ? 'text-red-500 cursor-default' : 'link-underline'} mx-2`}>About</Link>
 				<Link href="/projects" className={`${router.asPath.startsWith('/projects') ? 'text-yellow-500 cursor-default' : 'link-underline'} mx-2`}>Projects</Link>
 				<Link href="/contact" className={`${router.asPath.startsWith('/contact') ? 'text-blue-500 cursor-default' : 'link-underline'} mx-2`}>Contact</Link>
 				{/* <Link href="/resume" className={`${router.asPath.startsWith('/resume') ? 'text-red-500 cursor-default' : 'link-underline'} mx-2`}>Resume</Link> */}
-			</div>
+			</nav>
 
 			<div className="fixed z-50 items-center justify-center hidden w-screen h-screen p-4 font-black text-center text-white bg-gray-500 tiny:flex">
 				<h1>Oops! Looks like your viewport is too small to properly display my website. Please use a larger window or screen.</h1>

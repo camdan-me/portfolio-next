@@ -16,26 +16,21 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
   const prevScreen = useRef(Component);
   const [transitioning, setTransitioning] = useState(false);
-  const [doneTransitioning, setDoneTransitioning] = useState(true);
 
   useEffect(() => {
-    const handler = () => {
+    router.events.on('routeChangeStart', () => {
       setTransitioning(true);
-      setDoneTransitioning(false);
+    });
+    router.events.on('routeChangeComplete', () => {
       setTimeout(() => {
         prevScreen.current = Component;
         setTransitioning(false);
-
-        setTimeout(() => {
-          setDoneTransitioning(true);
-        }, 280);
       }, 280);
-    };
-
-    router.events.on('routeChangeComplete', handler);
+    });
 
     return () => {
-      router.events.off('routeChangeComplete', handler);
+      router.events.off('routeChangeComplete');
+      router.events.off('routeChangeStart');
     };
   }, [Component, router.events]);
 
@@ -48,21 +43,18 @@ export default function App({ Component, pageProps }) {
           font-family: ${baloo.style.fontFamily};
         }
       `}</style>
-      <Navbar />
-      <div className={cn({
-        'overflow-hidden bg-gray-500': !doneTransitioning,
-        'bg-gray-500': doneTransitioning,
-      })}>
-        <div
-          className={cn({
-            'animate-animateEnter': !transitioning,
-            'animate-animateExit': transitioning,
-          })}
-        >
-          <Screen {...pageProps} />
-        </div>
+
+      <div className='fixed w-screen h-screen overflow-hidden bg-gray-500 -z-50'></div>
+
+      <div
+        className={cn({
+          'animate-animateEnter': !transitioning,
+          'animate-animateExit': transitioning,
+        })}>
+        <Screen {...pageProps} />
       </div>
 
+      <Navbar />
       <Analytics />
     </>
   );
