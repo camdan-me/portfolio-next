@@ -13,6 +13,12 @@ import '@/styles/globals.css';
 
 const baloo = Baloo_2({ subsets: ['latin'] });
 
+const pageview = (url) => {
+  window.gtag('config', 'G-VT4FYXXHKH', {
+    page_path: url,
+  });
+};
+
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const prevScreen = useRef(Component);
@@ -22,7 +28,9 @@ export default function App({ Component, pageProps }) {
     router.events.on('routeChangeStart', () => {
       setTransitioning(true);
     });
-    router.events.on('routeChangeComplete', () => {
+    router.events.on('routeChangeComplete', (url) => {
+      pageview(url);
+
       setTimeout(() => {
         prevScreen.current = Component;
         setTransitioning(false);
