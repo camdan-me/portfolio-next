@@ -1,6 +1,7 @@
-import { Analytics } from '@vercel/analytics/react';
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
+
+import Script from 'next/script';
 
 import { Baloo_2 } from 'next/font/google';
 
@@ -44,6 +45,14 @@ export default function App({ Component, pageProps }) {
         }
       `}</style>
 
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-VT4FYXXHKH" strategy="afterInteractive"></Script>
+      <Script id="google-analytics" strategy="afterInteractive">{`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-VT4FYXXHKH');
+      `}</Script>
+
       <div className='fixed w-screen h-screen overflow-hidden bg-gray-500 -z-50'></div>
 
       <div
@@ -55,7 +64,6 @@ export default function App({ Component, pageProps }) {
       </div>
 
       <Navbar />
-      <Analytics />
     </>
   );
 }
