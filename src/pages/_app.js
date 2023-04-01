@@ -1,8 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 
-import Script from 'next/script';
-
 import { Baloo_2 } from 'next/font/google';
 
 import cn from 'classnames';
@@ -13,12 +11,6 @@ import '@/styles/globals.css';
 
 const baloo = Baloo_2({ subsets: ['latin'] });
 
-const pageview = (url) => {
-  window.gtag('config', 'G-VT4FYXXHKH', {
-    page_path: url,
-  });
-};
-
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const prevScreen = useRef(Component);
@@ -28,9 +20,7 @@ export default function App({ Component, pageProps }) {
     router.events.on('routeChangeStart', () => {
       setTransitioning(true);
     });
-    router.events.on('routeChangeComplete', (url) => {
-      pageview(url);
-
+    router.events.on('routeChangeComplete', () => {
       setTimeout(() => {
         prevScreen.current = Component;
         setTransitioning(false);
@@ -52,22 +42,6 @@ export default function App({ Component, pageProps }) {
           font-family: ${baloo.style.fontFamily};
         }
       `}</style>
-
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-VT4FYXXHKH" strategy="afterInteractive"></Script>
-      <Script
-        id='google-analytics'
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-VT4FYXXHKH', {
-              page_path: window.location.pathname,
-            });
-          `,
-        }}
-      />
 
       <div className='fixed w-screen h-screen overflow-hidden bg-gray-500 -z-50'></div>
 
