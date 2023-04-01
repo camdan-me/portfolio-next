@@ -1,10 +1,12 @@
-import { Analytics } from '@vercel/analytics/react';
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 
 import { Baloo_2 } from 'next/font/google';
 
+import Script from 'next/script';
+
 import cn from 'classnames';
+import mixpanel from 'mixpanel-browser';
 
 import Navbar from '../components/Navbar.js';
 
@@ -17,11 +19,20 @@ export default function App({ Component, pageProps }) {
   const prevScreen = useRef(Component);
   const [transitioning, setTransitioning] = useState(false);
 
+  mixpanel.init('0888b8e1959e15a7eb39b01c6d5c055e', { debug: true });
+
   useEffect(() => {
     router.events.on('routeChangeStart', () => {
       setTransitioning(true);
     });
-    router.events.on('routeChangeComplete', () => {
+
+    router.events.on('routeChangeComplete', (url) => {
+      mixpanel.track('Page View', { url });
+
+      window.gtag('config', 'G-VT4FYXXHKH', {
+        page_path: url,
+      });
+
       setTimeout(() => {
         prevScreen.current = Component;
         setTransitioning(false);
@@ -55,7 +66,22 @@ export default function App({ Component, pageProps }) {
       </div>
 
       <Navbar />
-      <Analytics />
+
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-VT4FYXXHKH" strategy="afterInteractive"></Script>
+      <Script
+        id='google-analytics'
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-VT4FYXXHKH', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
     </>
   );
 }
