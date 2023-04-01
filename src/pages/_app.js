@@ -46,12 +46,20 @@ export default function App({ Component, pageProps }) {
       `}</style>
 
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-VT4FYXXHKH" strategy="afterInteractive"></Script>
-      <Script id="google-analytics" strategy="afterInteractive">{`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-VT4FYXXHKH');
-      `}</Script>
+      <Script
+        id='google-analytics'
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-VT4FYXXHKH', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
 
       <div className='fixed w-screen h-screen overflow-hidden bg-gray-500 -z-50'></div>
 
