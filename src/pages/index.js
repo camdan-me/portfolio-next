@@ -18,6 +18,10 @@ const sleep = (ms) => {
   });
 };
 
+const prefersReducedMotion = (w) => {
+  return !!(w.matchMedia('(prefers-reduced-motion: reduce)') === true || w.matchMedia('(prefers-reduced-motion: reduce)').matches === true);
+};
+
 export default function Home() {
   const [fullQuote, setFullQuote] = useState(selectQuote());
   const [quote, setQuote] = useState('');
@@ -35,6 +39,12 @@ export default function Home() {
   };
 
   useEffect(() => {
+    if (prefersReducedMotion(window)) {
+      setQuote(fullQuote);
+      setIndex(fullQuote.length);
+      return;
+    }
+
     if (index !== fullQuote.length) {
       setTimeout(() => {
         if (tick >= 4) {
@@ -50,6 +60,7 @@ export default function Home() {
       if (tick !== 0) return;
 
       if (router.asPath.startsWith('/?skipanimation')) return setTick(5);
+      if (prefersReducedMotion(window)) return setTick(5);
 
       await sleep(500);
       setTick(1); // Reveal C
