@@ -6,6 +6,8 @@ import Image from 'next/image';
 
 import UniversalHead from '../components/UniversalHead.js';
 
+import prefersReducedMotion from '../functions/reducedMotion.js';
+
 import logo from '../../public/assets/img/transparent-logo.png';
 
 import quoteArray from '../../resources/quotes.json';
@@ -35,6 +37,12 @@ export default function Home() {
   };
 
   useEffect(() => {
+    if (prefersReducedMotion(window)) {
+      setQuote(fullQuote);
+      setIndex(fullQuote.length);
+      return;
+    }
+
     if (index !== fullQuote.length) {
       setTimeout(() => {
         if (tick >= 4) {
@@ -50,6 +58,7 @@ export default function Home() {
       if (tick !== 0) return;
 
       if (router.asPath.startsWith('/?skipanimation')) return setTick(5);
+      if (prefersReducedMotion(window)) return setTick(5);
 
       await sleep(500);
       setTick(1); // Reveal C

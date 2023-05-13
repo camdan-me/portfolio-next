@@ -10,6 +10,8 @@ import mixpanel from 'mixpanel-browser';
 
 import Navbar from '../components/Navbar.js';
 
+import prefersReducedMotion from '../functions/reducedMotion.js';
+
 import '@/styles/globals.css';
 
 const baloo = Baloo_2({ subsets: ['latin'] });
@@ -22,27 +24,29 @@ export default function App({ Component, pageProps }) {
   mixpanel.init('0888b8e1959e15a7eb39b01c6d5c055e', { debug: true });
 
   useEffect(() => {
-    router.events.on('routeChangeStart', () => {
-      setTransitioning(true);
-    });
-
-    router.events.on('routeChangeComplete', (url) => {
-      mixpanel.track('Page View', { url });
-
-      window.gtag('config', 'G-VT4FYXXHKH', {
-        page_path: url,
+    if (!prefersReducedMotion(window)) {
+      router.events.on('routeChangeStart', () => {
+        setTransitioning(true);
       });
 
-      setTimeout(() => {
-        prevScreen.current = Component;
-        setTransitioning(false);
-      }, 280);
-    });
+      router.events.on('routeChangeComplete', (url) => {
+        mixpanel.track('Page View', { url });
 
-    return () => {
-      router.events.off('routeChangeComplete');
-      router.events.off('routeChangeStart');
-    };
+        window.gtag('config', 'G-VT4FYXXHKH', {
+          page_path: url,
+        });
+
+        setTimeout(() => {
+          prevScreen.current = Component;
+          setTransitioning(false);
+        }, 280);
+      });
+
+      return () => {
+        router.events.off('routeChangeComplete');
+        router.events.off('routeChangeStart');
+      };
+    }
   }, [Component, router.events]);
 
   const Screen = !transitioning ? Component : prevScreen.current;
