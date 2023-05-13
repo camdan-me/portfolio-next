@@ -6,6 +6,8 @@ import Image from 'next/image';
 
 import UniversalHead from '../components/UniversalHead.js';
 
+import prefersReducedMotion from '../functions/reducedMotion.js';
+
 import logo from '../../public/assets/img/transparent-logo.png';
 
 import quoteArray from '../../resources/quotes.json';
@@ -16,10 +18,6 @@ const sleep = (ms) => {
   return new Promise((resolve) => {
     return setTimeout(resolve, ms);
   });
-};
-
-const prefersReducedMotion = (w) => {
-  return !!(w.matchMedia('(prefers-reduced-motion: reduce)') === true || w.matchMedia('(prefers-reduced-motion: reduce)').matches === true);
 };
 
 export default function Home() {

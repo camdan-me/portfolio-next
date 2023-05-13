@@ -10,13 +10,11 @@ import mixpanel from 'mixpanel-browser';
 
 import Navbar from '../components/Navbar.js';
 
+import prefersReducedMotion from '../functions/reducedMotion.js';
+
 import '@/styles/globals.css';
 
 const baloo = Baloo_2({ subsets: ['latin'] });
-
-const prefersReducedMotion = (w) => {
-  return !!(w.matchMedia('(prefers-reduced-motion: reduce)') === true || w.matchMedia('(prefers-reduced-motion: reduce)').matches === true);
-};
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
