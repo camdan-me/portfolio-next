@@ -9,6 +9,7 @@ import cn from 'classnames';
 import mixpanel from 'mixpanel-browser';
 
 import Navbar from '../components/Navbar.js';
+import Footer from '../components/Footer.js';
 
 import prefersReducedMotion from '../functions/reducedMotion.js';
 
@@ -59,6 +60,8 @@ export default function App({ Component, pageProps }) {
         }
       `}</style>
 
+      <Navbar />
+
       <div className='fixed w-screen h-screen overflow-hidden bg-gray-500 -z-50'></div>
 
       <div
@@ -69,7 +72,7 @@ export default function App({ Component, pageProps }) {
         <Screen {...pageProps} />
       </div>
 
-      <Navbar />
+      <Footer />
 
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-VT4FYXXHKH" strategy="afterInteractive"></Script>
       <Script
