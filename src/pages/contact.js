@@ -41,7 +41,7 @@ export default function Home() {
                 </Link>
               </div>
               <br />
-              <span className="text-sm italic text-gray-50">If you&apos;re trying to view/pay invoices or manage your billing, <Link href="https://billing.stripe.com/p/login/4gw6rJ136bvp5Ne4gg" className="underline">click here</Link>.</span>
+              <span className="text-sm italic text-gray-50">If you&apos;re trying to view/pay invoices or manage your billing, <Link href="https://billing.stripe.com/p/login/4gw6rJ136bvp5Ne4gg" className="underline" target="_blank">click here</Link>.</span>
             </h2>
           </div>
         </div>
