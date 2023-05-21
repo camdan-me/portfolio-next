@@ -15,11 +15,7 @@ export default function Footer() {
 				<div className="flex flex-col items-center p-8 m-auto text-6xl text-center text-white bg-blue-500 shadow-lg opacity-100 md:p-16 md:w-1/2 rounded-xl">
 					<div className="mb-8 text-4xl font-bold text-center text-white">Subscribe for more!</div>
 					<div className="flex-wrap mb-8 text-2xl font-semibold text-center text-white">I make cool stuff from time to time, and I usually share it with this newsletter. If you like my work, subscribe to stay in the loop!</div>
-					<iframe className="w-full" src="https://embeds.beehiiv.com/bcd6e475-cfe4-4fb9-baea-4bb901424ee0?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style={{
-						'margin': 0,
-						'border-radius': '0px !important',
-						'background-color': 'transparent',
-					}}></iframe>
+					<iframe className="w-full" src="https://embeds.beehiiv.com/bcd6e475-cfe4-4fb9-baea-4bb901424ee0?slim=true" height="52"></iframe>
 
 					<button className="mt-8 text-xl font-semibold text-center text-white link-underline" onClick={() => { return setShowSubscribe(false); }}>Close</button>
 				</div>
