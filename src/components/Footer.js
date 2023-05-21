@@ -7,7 +7,7 @@ export default function Footer() {
 
 	return (
 		<>
-			<div className="fixed bottom-0 content-center w-screen py-4 font-black text-center text-white">
+			<div className="fixed bottom-0 content-center w-screen px-8 py-4 font-black text-center text-white">
 				Created with <Link href="https://nextjs.org/" className="link-underline">NextJS</Link> and <Link href="https://tailwindcss.com/" className="link-underline">TailwindCSS</Link>. Check out the project on <Link href="https://github.com/camdan-me/portfolio-next" className="link-underline">GitHub</Link>. Want to hear more? <button className="link-underline" onClick={() => { return setShowSubscribe(true); }}>Join my newsletter</button>.
 			</div >
 
