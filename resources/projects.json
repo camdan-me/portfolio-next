@@ -1,0 +1,72 @@
+[
+	{
+		"id": "demoreel",
+		"title": "Demo Reel",
+		"description": "Every so often, when I've made some cool stuff, I create a new demo reel with a selection of my shots. This is the latest one.",
+		"status": "Completed",
+		"role": "Creator",
+		"cta": "Watch Now",
+		"link": "https://youtu.be/RYQR55FOKoY",
+		"category": "Video"
+	},
+	{
+		"id": "undecided",
+		"title": "Undecided",
+		"description": "Undecided is an award-winning short film I created with a few friends that looks at the struggle of the college search.",
+		"status": "Completed",
+		"role": "Director/Camera/Editor",
+		"cta": "Watch Now",
+		"link": "https://youtu.be/dD2AjOZ4CFI",
+		"category": "Video"
+	},
+	{
+		"id": "backintime",
+		"title": "Back In Time",
+		"description": "Back in Time was created as part of the 2023 Warren Tech Creative Jam. Everything in it is 100% original and created in 40 hours.",
+		"status": "Completed",
+		"role": "Director/Camera/Editor",
+		"cta": "Watch Now",
+		"link": "https://youtu.be/zASit_6FJlI",
+		"category": "Video"
+	},
+	{
+		"id": "theinterview",
+		"title": "The Interview",
+		"description": "The Interview was created in a day as my final for my Video Production class. It's a short comedy about a job interview gone wrong.",
+		"status": "Completed",
+		"role": "Creator",
+		"cta": "Watch Now",
+		"link": "https://youtu.be/JhNGlht7zzE",
+		"category": "Video"
+	},
+	{
+		"id": "compasspromo",
+		"title": "Compass Montessori Promo",
+		"description": "I created a promo video about my high school, Compass Montessori. The goal was to capture the uniqueness of the school.",
+		"status": "Completed",
+		"role": "Creator",
+		"cta": "Watch Now",
+		"link": "https://youtu.be/y6U4K123BXA",
+		"category": "Video"
+	},
+	{
+		"id": "lightingdesign",
+		"title": "Lighting Design",
+		"description": "I enjoy designing lighting for concerts, and made a reel showing off an abridged version of a few of my favorite designs.",
+		"status": "Completed",
+		"role": "Creator",
+		"cta": "Watch Now",
+		"link": "https://youtu.be/r8NSgfzNl_4",
+		"category": "Lighting Deisgn"
+	},
+	{
+		"id": "itstime",
+		"title": "It's Time",
+		"description": "It's Time is an environmental short film I've been working on since 2021. It's a call to action to save our planet and a passion project of mine.",
+		"status": "Postproduction",
+		"role": "Writer/Director",
+		"cta": "Coming Soon",
+		"link": "",
+		"category": "Video"
+	}
+]
