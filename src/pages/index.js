@@ -97,7 +97,7 @@ export default function Home() {
         <div className={`${tick >= 2 ? 'h-full' : 'h-0'} fixed z-50 w-full transition-all duration-1000 delay-300 bg-gray-500`}></div>
       </div>
 
-      <main className={`${tick < 3 && 'hidden'} overflow-hidden bg-gray-500 bg-circuit flex flex-col items-center justify-center w-screen h-screen`}>
+      <main className={`${tick < 3 && 'hidden'} bg-gray-500 bg-circuit flex flex-col items-center justify-center w-screen h-screen`}>
         <div className={`${tick >= 4 ? 'opacity-0' : 'opacity-100'} ${tick >= 5 && 'hidden'} fixed z-50 w-screen h-screen bg-gray-500 transition-all duration-1000`}></div>
 
         <div className="z-10 flex flex-row items-center mx-4">

@@ -14,7 +14,7 @@ export default function Home() {
         <title>Camdan&apos;s Projects</title>
       </Head>
 
-      <main className="w-screen min-h-screen overflow-hidden bg-gray-500 bg-topography">
+      <main className="w-screen min-h-screen bg-gray-500 bg-topography">
         <div className="flex flex-wrap items-center justify-center m-16 sm:mt-32">
           {projectsArray.map((project) => {
             return (

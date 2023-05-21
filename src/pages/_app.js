@@ -60,19 +60,21 @@ export default function App({ Component, pageProps }) {
         }
       `}</style>
 
-      <Navbar />
+      <div className="overflow-x-hidden">
+        <Navbar />
 
-      <div className='fixed w-screen h-screen overflow-hidden bg-gray-500 -z-50'></div>
+        <div className='fixed w-screen h-screen overflow-hidden bg-gray-500 -z-50'></div>
 
-      <div
-        className={cn({
-          'animate-animateEnter': !transitioning,
-          'animate-animateExit': transitioning,
-        })}>
-        <Screen {...pageProps} />
+        <div
+          className={cn({
+            'animate-animateEnter': !transitioning,
+            'animate-animateExit': transitioning,
+          })}>
+          <Screen {...pageProps} />
+        </div>
+
+        <Footer />
       </div>
-
-      <Footer />
 
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-VT4FYXXHKH" strategy="afterInteractive"></Script>
       <Script
