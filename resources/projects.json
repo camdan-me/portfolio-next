@@ -55,14 +55,14 @@
 		"color": "red"
 	},
 	{
-		"id": "lightingdesign",
-		"title": "Lighting Design",
-		"description": "I enjoy designing lighting for concerts, and made a reel showing off an abridged version of a few of my favorite designs.",
+		"id": "carincommons",
+		"title": "Car Inside Senior Prank",
+		"description": "For our Class of 2023 senior prank, we decided to put a car in the common area of our school. I made a video of how we did it.",
 		"status": "Completed",
 		"role": "Creator",
 		"cta": "Watch Now",
-		"link": "https://youtu.be/r8NSgfzNl_4",
-		"type": "Light Show",
+		"link": "https://youtu.be/T2PkVv9sxfQ",
+		"type": "Video",
 		"color": "red"
 	},
 	{
@@ -75,5 +75,126 @@
 		"link": "",
 		"type": "Video",
 		"color": "red"
+	},
+	{
+		"id": "portfolio",
+		"title": "Personal Portfolio",
+		"description": "This entire portfolio website is 100% custom, written using NextJS and TailwindCSS. It's a great example of my web development skills.",
+		"status": "Completed",
+		"role": "Creator",
+		"cta": "Check out the Code",
+		"link": "https://github.com/camdan-me/portfolio-next",
+		"type": "Website",
+		"color": "yellow"
+	},
+	{
+		"id": "birthday",
+		"title": "Birthday Celebration Site",
+		"description": "As a way to celebrate my friends birthdays, I created a simple site for them.",
+		"status": "Completed",
+		"role": "Creator",
+		"cta": "Check out the Code",
+		"link": "https://github.com/camdan-me/birthday",
+		"type": "Website",
+		"color": "yellow"
+	},
+	{
+		"id": "businesscard",
+		"title": "NPX Business Card",
+		"description": "To experiment with NPM packages and the associated flow, I created a business card that can be viewd by running \"npx camdan-me\". Try it!",
+		"status": "Completed",
+		"role": "Creator",
+		"cta": "Check out the Code",
+		"link": "https://github.com/camdan-me/business-card",
+		"type": "NPM Package",
+		"color": "yellow"
+	},
+	{
+		"id": "profilechess",
+		"title": "Profile Chess Game",
+		"description": "When I was refining my GitHub profile, I found someone had created a chess game that runs using GitHub actions. I thought it was cool so I made a few modifications and added it to my own profile.",
+		"status": "Completed",
+		"role": "Creator",
+		"cta": "Play Chess",
+		"link": "https://github.com/camdan-me",
+		"type": "GitHub Profile",
+		"color": "yellow"
+	},
+	{
+		"id": "tedxwarrentech",
+		"title": "TEDxWarrenTech",
+		"description": "I was the lead organizer for the first ever TEDxWarrenTech event, which happened on April 15, 2023. The videos will be released soon!",
+		"status": "Postproduction",
+		"role": "Lead Organizer",
+		"cta": "Coming Soon",
+		"link": "",
+		"type": "Live Event",
+		"color": "blue"
+	},
+	{
+		"id": "lightingdesign",
+		"title": "Lighting Design",
+		"description": "I enjoy designing lighting for concerts, and made a reel showing off an abridged version of a few of my favorite designs.",
+		"status": "Completed",
+		"role": "Creator",
+		"cta": "Watch Now",
+		"link": "https://youtu.be/r8NSgfzNl_4",
+		"type": "Light Show",
+		"color": "blue"
+	},
+	{
+		"id": "reflection",
+		"title": "Reflection Remix",
+		"description": "\"Reflection\" by Oxeye was my first ever remix in the Live Sound class at Warren Tech. It was a lot of fun to make, and the video is a timlapse of the process.",
+		"status": "Completed",
+		"role": "Creator",
+		"cta": "Listen Now",
+		"link": "https://youtu.be/HnVdXDTH11U",
+		"type": "Music Remix",
+		"color": "blue"
+	},
+	{
+		"id": "neverletyougo",
+		"title": "Never Let You Go Remix",
+		"description": "\"Never Let You Go\" by Brian CeeFH was one of my more recent mixes, taking into account what I've learned since my first remix.",
+		"status": "Completed",
+		"role": "Creator",
+		"cta": "Listen Now",
+		"link": "https://youtu.be/xAne7GIvXO8",
+		"type": "Music Remix",
+		"color": "blue"
+	},
+	{
+		"id": "stelmosfire",
+		"title": "St. Elmo's Fire Ambisonic Remix",
+		"description": "I recently discovered the concept of ambisonic/spatial audio, and this was my first attempt at remixing a song to be ambisonic. Listen to it with headphones, it tickles your brain.",
+		"status": "Completed",
+		"role": "Creator",
+		"cta": "Listen Now",
+		"link": "https://youtu.be/IBGJo7ANbbg",
+		"type": "Ambisonic Remix",
+		"color": "blue"
+	},
+	{
+		"id": "dontstopbelievin",
+		"title": "Don't Stop Believin Ambisonic Remix",
+		"description": "After I created my St. Elmo's Fire remix, I wanted to do more. This is my second ambisonic remix, using a slightly different technique for a wider soundfield.",
+		"status": "Completed",
+		"role": "Creator",
+		"cta": "Listen Now",
+		"link": "https://youtu.be/tM_bSRBljmQ",
+		"type": "Ambisonic Remix",
+		"color": "blue"
+	},
+	{
+		"id": "backintimeaudio",
+		"title": "Back in Time Official Audio",
+		"description": "During the creative jam where Back in Time was created, I also made my own mix of the song.",
+		"status": "Completed",
+		"role": "Creator",
+		"cta": "Listen Now",
+		"link": "https://youtu.be/kTTKqQPeH3E",
+		"type": "Music Mix",
+		"color": "blue"
 	}
 ]
