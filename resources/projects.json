@@ -1,13 +1,14 @@
 [
 	{
-		"id": "demoreel",
+		"id": "2023demoreel",
 		"title": "Demo Reel",
 		"description": "Every so often, when I've made some cool stuff, I create a new demo reel with a selection of my shots. This is the latest one.",
 		"status": "Completed",
 		"role": "Creator",
 		"cta": "Watch Now",
 		"link": "https://youtu.be/RYQR55FOKoY",
-		"category": "Video"
+		"type": "Demo Reel",
+		"color": "red"
 	},
 	{
 		"id": "undecided",
@@ -17,7 +18,8 @@
 		"role": "Director/Camera/Editor",
 		"cta": "Watch Now",
 		"link": "https://youtu.be/dD2AjOZ4CFI",
-		"category": "Video"
+		"type": "Video",
+		"color": "red"
 	},
 	{
 		"id": "backintime",
@@ -27,7 +29,8 @@
 		"role": "Director/Camera/Editor",
 		"cta": "Watch Now",
 		"link": "https://youtu.be/zASit_6FJlI",
-		"category": "Video"
+		"type": "Music Video",
+		"color": "red"
 	},
 	{
 		"id": "theinterview",
@@ -37,7 +40,8 @@
 		"role": "Creator",
 		"cta": "Watch Now",
 		"link": "https://youtu.be/JhNGlht7zzE",
-		"category": "Video"
+		"type": "Video",
+		"color": "red"
 	},
 	{
 		"id": "compasspromo",
@@ -47,7 +51,8 @@
 		"role": "Creator",
 		"cta": "Watch Now",
 		"link": "https://youtu.be/y6U4K123BXA",
-		"category": "Video"
+		"type": "Video",
+		"color": "red"
 	},
 	{
 		"id": "lightingdesign",
@@ -57,7 +62,8 @@
 		"role": "Creator",
 		"cta": "Watch Now",
 		"link": "https://youtu.be/r8NSgfzNl_4",
-		"category": "Lighting Deisgn"
+		"type": "Light Show",
+		"color": "red"
 	},
 	{
 		"id": "itstime",
@@ -67,6 +73,7 @@
 		"role": "Writer/Director",
 		"cta": "Coming Soon",
 		"link": "",
-		"category": "Video"
+		"type": "Video",
+		"color": "red"
 	}
 ]
