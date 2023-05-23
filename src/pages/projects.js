@@ -40,9 +40,9 @@ export default function Home() {
             onMouseOut={() => { return document.getElementById(`project-image-${project.id}`).classList.remove('scale-90'); }}>
             <div className="p-6 bg-white rounded-lg shadow-lg">
               <p className="flex flex-wrap py-2 mb-1 text-sm text-white">
-                <span className="px-2 py-1 mb-1 mr-1 bg-yellow-500 rounded-full">{project.status}</span>
-                <span className="px-2 py-1 mb-1 mr-1 bg-red-500 rounded-full">{project.type}</span>
-                <span className="px-2 py-1 mb-1 mr-1 bg-blue-500 rounded-full">{project.role}</span>
+                <span className="px-2 py-1 mb-1 mr-1 bg-gray-500 rounded-full">{project.status}</span>
+                <span className="px-2 py-1 mb-1 mr-1 bg-gray-500 rounded-full">{project.type}</span>
+                <span className="px-2 py-1 mb-1 mr-1 bg-gray-500 rounded-full">{project.role}</span>
               </p>
               <h4 className="text-xl font-bold">{project.title}</h4>
 
