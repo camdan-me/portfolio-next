@@ -79,7 +79,7 @@ export default function Home() {
             <span className="hidden mr-1 text-2xl font-bold text-gray-900 md:inline">Categories:</span>
             <button onClick={() => { toggle('red'); }} className={`px-4 py-2 m-1 text-white transition-all rounded-full duration-250 hover:ring-4 ring-red-500 ${activeColors.includes('red') ? 'bg-red-500' : 'bg-gray-500'}`}>Filmmaking</button>
             <button onClick={() => { toggle('yellow'); }} className={`px-4 py-2 m-1 text-white transition-all rounded-full duration-250 hover:ring-4 ring-yellow-500 ${activeColors.includes('yellow') ? 'bg-yellow-500' : 'bg-gray-500'}`}>Programming</button>
-            <button onClick={() => { toggle('blue'); }} className={`px-4 py-2 m-1 text-white transition-all rounded-full duration-250 hover:ring-4 ring-blue-500 ${activeColors.includes('blue') ? 'bg-blue-500' : 'bg-gray-500'}`}>Miscellaneous</button>
+            <button onClick={() => { toggle('blue'); }} className={`px-4 py-2 m-1 text-white transition-all rounded-full duration-250 hover:ring-4 ring-blue-500 ${activeColors.includes('blue') ? 'bg-blue-500' : 'bg-gray-500'}`}>Live Events/Music</button>
           </div>
         </div>
         <div className="flex flex-wrap items-center justify-center m-16 mt-0 text-gray-900">
