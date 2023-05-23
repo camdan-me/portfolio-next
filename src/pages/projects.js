@@ -14,7 +14,7 @@ export default function Home() {
 
       return (
         <div key={project.id} className="grid w-full mx-2 my-8 md:w-[45%] lg:w-[30%]">
-          <Image id={`project-image-${project.id}`} src={`https://cdn.camdan.me/projects/${project.id}.jpg`} alt={`${project.title} Image`} className="object-cover object-center w-full transition-all duration-500 rounded-lg shadow-md" width="1920" height="1080"></Image>
+          <Image id={`project-image-${project.id}`} src={`https://cdn.camdan.me/projects/${project.id}.jpg`} alt={`${project.title} Image`} onClick={() => { return window.open(project.link, '_blank'); }} className="object-cover object-center w-full transition-all duration-500 rounded-lg shadow-md cursor-pointer" width="1920" height="1080"></Image>
 
           <div className="relative px-1 -mt-8 transition-all duration-500 sm:px-4 hover:scale-110" onMouseOver={() => { return document.getElementById(`project-image-${project.id}`).classList.add('scale-90'); }} onMouseOut={() => { return document.getElementById(`project-image-${project.id}`).classList.remove('scale-90'); }}>
             <div className="p-6 bg-white rounded-lg shadow-lg">
