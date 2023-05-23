@@ -14,9 +14,23 @@ export default function Home() {
 
       return (
         <div key={project.id} className="grid w-full mx-2 my-8 md:w-[45%] lg:w-[30%]">
-          <Image id={`project-image-${project.id}`} src={`https://cdn.camdan.me/projects/${project.id}.jpg`} alt={`${project.title} Image`} onClick={() => { return window.open(project.link, '_blank'); }} className="object-cover object-center w-full transition-all duration-500 rounded-lg shadow-md cursor-pointer" width="1920" height="1080"></Image>
+          <Image
+            id={`project-image-${project.id}`}
+            src={`https://cdn.camdan.me/projects/${project.id}.jpg`}
+            alt={`${project.title} Image`}
+            onClick={() => { return window.open(project.link, '_blank'); }}
+            className="object-cover object-center w-full transition-all duration-500 rounded-lg shadow-md cursor-pointer hover:scale-90"
+            onMouseOver={() => { return document.getElementById(`project-card-${project.id}`).classList.add('scale-110'); }}
+            onMouseOut={() => { return document.getElementById(`project-card-${project.id}`).classList.remove('scale-110'); }}
+            width="1920"
+            height="1080">
+          </Image>
 
-          <div className="relative px-1 -mt-8 transition-all duration-500 sm:px-4 hover:scale-110" onMouseOver={() => { return document.getElementById(`project-image-${project.id}`).classList.add('scale-90'); }} onMouseOut={() => { return document.getElementById(`project-image-${project.id}`).classList.remove('scale-90'); }}>
+          <div
+            id={`project-card-${project.id}`}
+            className="relative px-1 -mt-8 transition-all duration-500 sm:px-4 hover:scale-110"
+            onMouseOver={() => { return document.getElementById(`project-image-${project.id}`).classList.add('scale-90'); }}
+            onMouseOut={() => { return document.getElementById(`project-image-${project.id}`).classList.remove('scale-90'); }}>
             <div className="p-6 bg-white rounded-lg shadow-lg">
               <p className="flex flex-wrap py-2 mb-1 text-sm text-white">
                 <span className="px-2 py-1 mb-1 mr-1 bg-yellow-500 rounded-full">{project.status}</span>
