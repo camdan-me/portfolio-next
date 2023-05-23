@@ -16,6 +16,12 @@ export default function Home() {
   };
 
   const getProjects = (colors) => {
+    if (colors.length === 0) {
+      return (
+        <h2 className="my-4 mt-16 text-3xl font-black text-center text-white sm:text-5xl">Whoops! Nothing to see here... Try a different filter?</h2>
+      );
+    }
+
     return projectsArray.map((project) => {
       if (!colors.includes(project.color)) return;
 
