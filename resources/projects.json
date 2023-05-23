@@ -8,7 +8,7 @@
 		"cta": "Watch Now",
 		"link": "https://youtu.be/RYQR55FOKoY",
 		"type": "Demo Reel",
-		"color": "red"
+		"category": "filmmaking"
 	},
 	{
 		"id": "undecided",
@@ -19,7 +19,7 @@
 		"cta": "Watch Now",
 		"link": "https://youtu.be/dD2AjOZ4CFI",
 		"type": "Video",
-		"color": "red"
+		"category": "filmmaking"
 	},
 	{
 		"id": "backintime",
@@ -30,7 +30,7 @@
 		"cta": "Watch Now",
 		"link": "https://youtu.be/zASit_6FJlI",
 		"type": "Music Video",
-		"color": "red"
+		"category": "filmmaking"
 	},
 	{
 		"id": "theinterview",
@@ -41,7 +41,7 @@
 		"cta": "Watch Now",
 		"link": "https://youtu.be/JhNGlht7zzE",
 		"type": "Video",
-		"color": "red"
+		"category": "filmmaking"
 	},
 	{
 		"id": "compasspromo",
@@ -52,7 +52,7 @@
 		"cta": "Watch Now",
 		"link": "https://youtu.be/y6U4K123BXA",
 		"type": "Video",
-		"color": "red"
+		"category": "filmmaking"
 	},
 	{
 		"id": "carincommons",
@@ -63,7 +63,7 @@
 		"cta": "Watch Now",
 		"link": "https://youtu.be/T2PkVv9sxfQ",
 		"type": "Video",
-		"color": "red"
+		"category": "filmmaking"
 	},
 	{
 		"id": "itstime",
@@ -74,7 +74,7 @@
 		"cta": "Coming Soon",
 		"link": "",
 		"type": "Video",
-		"color": "red"
+		"category": "filmmaking"
 	},
 	{
 		"id": "portfolio",
@@ -85,7 +85,7 @@
 		"cta": "Check out the Code",
 		"link": "https://github.com/camdan-me/portfolio-next",
 		"type": "Website",
-		"color": "yellow"
+		"category": "programming"
 	},
 	{
 		"id": "birthday",
@@ -96,7 +96,7 @@
 		"cta": "Check out the Code",
 		"link": "https://github.com/camdan-me/birthday",
 		"type": "Website",
-		"color": "yellow"
+		"category": "programming"
 	},
 	{
 		"id": "businesscard",
@@ -107,7 +107,7 @@
 		"cta": "Check out the Code",
 		"link": "https://github.com/camdan-me/business-card",
 		"type": "NPM Package",
-		"color": "yellow"
+		"category": "programming"
 	},
 	{
 		"id": "profilechess",
@@ -118,7 +118,7 @@
 		"cta": "Play Chess",
 		"link": "https://github.com/camdan-me",
 		"type": "GitHub Profile",
-		"color": "yellow"
+		"category": "programming"
 	},
 	{
 		"id": "tedxwarrentech",
@@ -129,7 +129,7 @@
 		"cta": "Coming Soon",
 		"link": "",
 		"type": "Live Event",
-		"color": "blue"
+		"category": "other"
 	},
 	{
 		"id": "lightingdesign",
@@ -140,7 +140,7 @@
 		"cta": "Watch Now",
 		"link": "https://youtu.be/r8NSgfzNl_4",
 		"type": "Light Show",
-		"color": "blue"
+		"category": "other"
 	},
 	{
 		"id": "reflection",
@@ -151,7 +151,7 @@
 		"cta": "Listen Now",
 		"link": "https://youtu.be/HnVdXDTH11U",
 		"type": "Music Remix",
-		"color": "blue"
+		"category": "other"
 	},
 	{
 		"id": "neverletyougo",
@@ -162,18 +162,18 @@
 		"cta": "Listen Now",
 		"link": "https://youtu.be/xAne7GIvXO8",
 		"type": "Music Remix",
-		"color": "blue"
+		"category": "other"
 	},
 	{
 		"id": "stelmosfire",
 		"title": "St. Elmo's Fire Ambisonic Remix",
-		"description": "I recently discovered the concept of ambisonic/spatial audio, and this was my first attempt at remixing a song to be ambisonic. Listen to it with headphones, it tickles your brain.",
+		"description": "I recently discovefilmmaking the concept of ambisonic/spatial audio, and this was my first attempt at remixing a song to be ambisonic. Listen to it with headphones, it tickles your brain.",
 		"status": "Completed",
 		"role": "Creator",
 		"cta": "Listen Now",
 		"link": "https://youtu.be/IBGJo7ANbbg",
 		"type": "Ambisonic Remix",
-		"color": "blue"
+		"category": "other"
 	},
 	{
 		"id": "dontstopbelievin",
@@ -184,7 +184,7 @@
 		"cta": "Listen Now",
 		"link": "https://youtu.be/tM_bSRBljmQ",
 		"type": "Ambisonic Remix",
-		"color": "blue"
+		"category": "other"
 	},
 	{
 		"id": "backintimeaudio",
@@ -195,6 +195,6 @@
 		"cta": "Listen Now",
 		"link": "https://youtu.be/kTTKqQPeH3E",
 		"type": "Music Mix",
-		"color": "blue"
+		"category": "other"
 	}
 ]
