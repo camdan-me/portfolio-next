@@ -1,8 +1,15 @@
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
   images: {
     domains: ['camdan.me', 'img.camdan.me', 'cdn.camdan.me'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/donate',
+        destination: 'https://donate.stripe.com/28o9ASecU10p1ziaEE',
+        permanent: false,
+      },
+    ];
+  },
 };
-
-module.exports = nextConfig;
