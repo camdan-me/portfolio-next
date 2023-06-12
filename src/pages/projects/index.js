@@ -3,9 +3,9 @@ import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 
-import UniversalHead from '../components/UniversalHead.js';
+import UniversalHead from '../../components/UniversalHead.js';
 
-import projectsArray from '../../resources/projects.json';
+import projectsArray from '../../../resources/projects.json';
 
 export default function Home() {
   const [category, setCategory] = useState('filmmaking');
@@ -20,7 +20,7 @@ export default function Home() {
             id={`project-image-${project.id}`}
             src={`https://cdn.camdan.me/projects/${project.id}.jpg`}
             alt={`${project.title} Image`}
-            onClick={() => { return window.open(project.link, '_blank'); }}
+            onClick={() => { return window.open(`/projects/${project.id}`, '_blank'); }}
             className="object-cover object-center w-full transition-all duration-500 rounded-lg shadow-md cursor-pointer hover:scale-90"
             onMouseOver={() => { return document.getElementById(`project-card-${project.id}`).classList.add('scale-110'); }}
             onMouseOut={() => { return document.getElementById(`project-card-${project.id}`).classList.remove('scale-110'); }}
@@ -45,7 +45,7 @@ export default function Home() {
                 {project.description}
               </div>
 
-              <button onClick={() => { return window.open(project.link, '_blank'); }} className="w-full h-12 px-6 text-white transition-all duration-150 bg-gray-600 rounded-lg focus:outline-none focus:shadow-outline hover:bg-gray-900 disabled:cursor-not-allowed disabled:bg-gray-100" disabled={!project.link}>
+              <button onClick={() => { return window.open(`/projects/${project.id}`, '_blank'); }} className="w-full h-12 px-6 text-white transition-all duration-150 bg-gray-600 rounded-lg focus:outline-none focus:shadow-outline hover:bg-gray-900 disabled:cursor-not-allowed disabled:bg-gray-100" disabled={!project.link}>
                 {project.cta}
               </button>
             </div>
