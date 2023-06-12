@@ -23,7 +23,7 @@ export default function Home({ project }) {
 			<Head>
 				<UniversalHead description="I like to make technology do cool stuff. I'm particularly good at fixing things that are broken. Sometimes I make websites, music, videos, music videos, cool lights, or concerts." />
 
-				<title>Welcome to my Newsletter!</title>
+				<title>Please Wait</title>
 			</Head>
 
 			<main className="flex items-center justify-center w-screen h-screen bg-gray-500 bg-signal">
