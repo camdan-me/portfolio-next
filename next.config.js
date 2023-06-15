@@ -15,6 +15,11 @@ module.exports = {
         destination: 'https://buy.stripe.com/28o9ASecU10p1ziaEE',
         permanent: false,
       },
+      {
+        source: '/vcard',
+        destination: 'https://cdn.camdan.me/logos/vcard.vcf',
+        permanent: false,
+      },
     ];
   },
 };
