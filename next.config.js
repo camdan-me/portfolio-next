@@ -20,6 +20,11 @@ module.exports = {
         destination: 'https://cdn.camdan.me/logos/vcard.vcf',
         permanent: false,
       },
+      {
+        source: '/nfc',
+        destination: '/vcard',
+        permanent: false,
+      },
     ];
   },
 };
