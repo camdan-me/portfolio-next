@@ -13,6 +13,13 @@ import logo from '../../public/assets/img/transparent-logo.png';
 
 import quoteArray from '../../resources/quotes.json';
 
+// pick a random quote from the array
+const selectQuote = () => {
+  return quoteArray.quotes[
+    Math.floor(Math.random() * quoteArray.quotes.length)
+  ];
+};
+
 export default function Home() {
   const [fullQuote, setFullQuote] = useState(selectQuote()); // current quote in its intirety
   const [quote, setQuote] = useState(''); // current quote being displayed
@@ -20,13 +27,6 @@ export default function Home() {
   const [tick, setTick] = useState(0); // current tick of the intro animation
 
   const router = useRouter();
-
-  // pick a random quote from the array
-  const selectQuote = () => {
-    return quoteArray.quotes[
-      Math.floor(Math.random() * quoteArray.quotes.length)
-    ];
-  };
 
   // when the quote element is clicked, pick a new quote
   const quoteClick = () => {
