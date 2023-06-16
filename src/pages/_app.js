@@ -31,12 +31,6 @@ export default function App({ Component, pageProps }) {
       });
 
       router.events.on('routeChangeComplete', (url) => {
-        mixpanel.track('Page View', { url });
-
-        window.gtag('config', 'G-VT4FYXXHKH', {
-          page_path: url,
-        });
-
         setTimeout(() => {
           prevScreen.current = Component;
           setTransitioning(false);
@@ -48,6 +42,14 @@ export default function App({ Component, pageProps }) {
         router.events.off('routeChangeStart');
       };
     }
+
+    router.events.on('routeChangeComplete', (url) => {
+      mixpanel.track('Page View', { url });
+
+      window.gtag('config', 'G-VT4FYXXHKH', {
+        page_path: url,
+      });
+    });
   }, [Component, router.events]);
 
   const Screen = !transitioning ? Component : prevScreen.current;
