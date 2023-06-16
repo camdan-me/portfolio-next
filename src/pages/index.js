@@ -7,27 +7,28 @@ import Image from 'next/image';
 import UniversalHead from '../components/UniversalHead.js';
 
 import prefersReducedMotion from '../functions/reducedMotion.js';
+import sleep from '../functions/sleep.js';
 
 import logo from '../../public/assets/img/transparent-logo.png';
 
 import quoteArray from '../../resources/quotes.json';
 
-const selectQuote = () => { return quoteArray.quotes[Math.floor(Math.random() * quoteArray.quotes.length)]; };
-
-const sleep = (ms) => {
-  return new Promise((resolve) => {
-    return setTimeout(resolve, ms);
-  });
+// pick a random quote from the array
+const selectQuote = () => {
+  return quoteArray.quotes[
+    Math.floor(Math.random() * quoteArray.quotes.length)
+  ];
 };
 
 export default function Home() {
-  const [fullQuote, setFullQuote] = useState(selectQuote());
-  const [quote, setQuote] = useState('');
-  const [index, setIndex] = useState(0);
-  const [tick, setTick] = useState(0);
+  const [fullQuote, setFullQuote] = useState(selectQuote()); // current quote in its intirety
+  const [quote, setQuote] = useState(''); // current quote being displayed
+  const [index, setIndex] = useState(0); // current index of the quote, representing how much of it is typed out
+  const [tick, setTick] = useState(0); // current tick of the intro animation
 
   const router = useRouter();
 
+  // when the quote element is clicked, pick a new quote
   const quoteClick = () => {
     if (index !== fullQuote.length) return;
 
@@ -37,12 +38,14 @@ export default function Home() {
   };
 
   useEffect(() => {
+    // if the browser prefers reduced motion, fill in the quote instantly
     if (prefersReducedMotion(window)) {
       setQuote(fullQuote);
       setIndex(fullQuote.length);
       return;
     }
 
+    // if the quote is not fully typed out, add a letter to it
     if (index !== fullQuote.length) {
       setTimeout(() => {
         if (tick >= 4) {
@@ -53,6 +56,7 @@ export default function Home() {
     }
   }, [index, quote, fullQuote, tick]);
 
+  // run the intro animation
   useEffect(() => {
     (async () => {
       if (tick !== 0) return;

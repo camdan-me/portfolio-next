@@ -11,13 +11,16 @@ import logo from '../../../public/assets/img/transparent-logo.png';
 export default function Home({ project }) {
 	const router = useRouter();
 
+	// get the project object from the array of projects by ID
 	const projectObject = projectsArray.filter((obj) => { return obj.id === project; })[0];
 
+	// redirect to the project's link
 	useEffect(() => {
 		if (projectObject && projectObject.link) router.replace(projectObject.link);
 		else router.replace('/projects');
 	}, [projectObject, router]);
 
+	// display an intermediate page while the redirect is happening
 	return (
 		<>
 			<Head>
@@ -45,6 +48,7 @@ export const getStaticPaths = async () => {
 	};
 };
 
+// getStaticProps is required for dynamic routes
 export const getStaticProps = async ({ params }) => {
 	const route = params.project;
 	const project = route.toLowerCase();
