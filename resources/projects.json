@@ -33,6 +33,17 @@
 		"category": "filmmaking"
 	},
 	{
+		"id": "sinerider",
+		"title": "SineRider Trailer",
+		"description": "Early in 2023 I was invited to join the team developing a math-based videogame called SineRider. I created the trailer for it.",
+		"status": "Completed",
+		"role": "Creator",
+		"cta": "Watch Now",
+		"link": "https://twitter.com/hackclub/status/1655564401280262144",
+		"type": "Trailer",
+		"category": "filmmaking"
+	},
+	{
 		"id": "theinterview",
 		"title": "The Interview",
 		"description": "The Interview was created in a day as my final for my Video Production class. It's a short comedy about a job interview gone wrong.",
