@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <UniversalHead description="I like to make technology do cool stuff. I'm particularly good at fixing things that are broken. Sometimes I make websites, music, videos, music videos, cool lights, or concerts." />
+        <UniversalHead description="Get in touch with Camdan Mead through phone, email, or social media." />
 
         <title>Contact Camdan</title>
       </Head>
@@ -23,7 +23,7 @@ export default function Home() {
               Have a <span className="text-red-500">question,</span> <span className="text-blue-500">comment,</span> or <span className="text-yellow-500">project idea?</span> I&apos;d love to speak with you!
             </h1>
             <h2 className="mt-2 font-bold text-center text-white text-l sm:text-2xl sm:text-left">
-              I&apos;d love to hear from you! Please feel free to contact me via, <Link href="mailto:hello@camdan.me" className="underline">email</Link>, <Link href="tel:7194226326" className="underline">text</Link>, or <Link href="tel:7194226326" className="underline">phone</Link>.<br />
+              I&apos;d love to hear from you! Please feel free to contact me via, <Link href="mailto:hello@camdan.me" className="link-underline">email</Link>, <Link href="tel:7194226326" className="link-underline">text</Link>, <Link href="tel:7194226326" className="link-underline">phone</Link>, or social media.<br />
               <br />
               If you&apos;d like to work with me, you can reach out for my schedule and rates, and check out my <Link href="/projects" className="underline">projects</Link> to see what I&apos;ve done before.
               <div className="flex flex-row justify-center mt-8 sm:justify-start">

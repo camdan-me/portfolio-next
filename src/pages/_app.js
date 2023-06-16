@@ -19,18 +19,20 @@ const baloo = Baloo_2({ subsets: ['latin'] });
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
-  const prevScreen = useRef(Component);
-  const [transitioning, setTransitioning] = useState(false);
+  const prevScreen = useRef(Component); // the previous displayed page, used for transitions
+  const [transitioning, setTransitioning] = useState(false); // whether or not the page is transitioning
 
-  mixpanel.init('0888b8e1959e15a7eb39b01c6d5c055e', { debug: true });
+  mixpanel.init('0888b8e1959e15a7eb39b01c6d5c055e', { debug: true }); // connect to mixpanel
 
   useEffect(() => {
     if (!prefersReducedMotion(window)) {
+      // if the browser does not prefer reduced motion, run the page transition animation
       router.events.on('routeChangeStart', () => {
         setTransitioning(true);
       });
 
-      router.events.on('routeChangeComplete', (url) => {
+      // when the page transition animation is complete, set the previous page to the current page
+      router.events.on('routeChangeComplete', () => {
         setTimeout(() => {
           prevScreen.current = Component;
           setTransitioning(false);
@@ -43,6 +45,7 @@ export default function App({ Component, pageProps }) {
       };
     }
 
+    // analytics tracking
     router.events.on('routeChangeComplete', (url) => {
       mixpanel.track('Page View', { url });
 
@@ -52,6 +55,7 @@ export default function App({ Component, pageProps }) {
     });
   }, [Component, router.events]);
 
+  // if the page is transitioning, display the previous page
   const Screen = !transitioning ? Component : prevScreen.current;
 
   return (

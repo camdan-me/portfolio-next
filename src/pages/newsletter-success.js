@@ -14,7 +14,7 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<UniversalHead description="I like to make technology do cool stuff. I'm particularly good at fixing things that are broken. Sometimes I make websites, music, videos, music videos, cool lights, or concerts." />
+				<UniversalHead description="You're now subscribed!" />
 
 				<title>Welcome to my Newsletter!</title>
 			</Head>

@@ -8,12 +8,14 @@ import UniversalHead from '../../components/UniversalHead.js';
 import projectsArray from '../../../resources/projects.json';
 
 export default function Home() {
-  const [category, setCategory] = useState('filmmaking');
+  const [category, setCategory] = useState('filmmaking'); // current category of projects being displayed
 
   const getProjects = () => {
     return projectsArray.map((project) => {
+      // if the project is not in the current category, don't display it
       if (category !== project.category) return;
 
+      // if the project is in the current category, render the component
       return (
         <div key={project.id} className="grid w-full mx-4 my-8 md:w-[45%] lg:w-[30%]">
           <Image

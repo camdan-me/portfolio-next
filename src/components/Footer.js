@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 export default function Footer() {
-	const [showSubscribe, setShowSubscribe] = useState(false);
+	const [showSubscribe, setShowSubscribe] = useState(false); // whether or not the subscribe modal is open
 
 	return (
 		<>
