@@ -119,7 +119,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div onClick={() => { return quoteClick(); }} className={`${(index === fullQuote.length) && 'cursor-pointer'} flex flex-row items-center mb-[20%] wide:mb-0 mt-4 mx-8 bg-gray-600 rounded-lg p-4 z-10`}>
+        <div onClick={() => { return quoteClick(); }} className={`${(index === fullQuote.length) ? 'cursor-pointer' : 'cursor-default'} flex flex-row items-center mb-[20%] wide:mb-0 mt-4 mx-8 bg-gray-600 rounded-lg p-4 z-10`}>
           <p className="font-semibold text-white text-m">
             &quot;{quote}&quot;
           </p>
