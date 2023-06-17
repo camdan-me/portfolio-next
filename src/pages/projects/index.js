@@ -7,6 +7,20 @@ import UniversalHead from '../../components/UniversalHead.js';
 
 import projectsArray from '../../../resources/projects.json';
 
+const keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+
+const triplet = (e1, e2, e3) => {
+  return keyStr.charAt(e1 >> 2) +
+    keyStr.charAt(((e1 & 3) << 4) | (e2 >> 4)) +
+    keyStr.charAt(((e2 & 15) << 2) | (e3 >> 6)) +
+    keyStr.charAt(e3 & 63);
+};
+
+const rgbDataURL = (r, g, b) => {
+  return `data:image/gif;base64,R0lGODlhAQABAPAA${triplet(0, r, g) + triplet(b, 255, 255)
+    }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`;
+};
+
 export default function Home() {
   const [category, setCategory] = useState('filmmaking'); // current category of projects being displayed
 
@@ -27,7 +41,10 @@ export default function Home() {
             onMouseOver={() => { return document.getElementById(`project-card-${project.id}`).classList.add('scale-110'); }}
             onMouseOut={() => { return document.getElementById(`project-card-${project.id}`).classList.remove('scale-110'); }}
             width="1920"
-            height="1080">
+            height="1080"
+            placeholder="blur"
+            blurDataURL={rgbDataURL(project.color[0], project.color[1], project.color[2])}
+          >
           </Image>
 
           <div
