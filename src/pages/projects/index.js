@@ -40,8 +40,8 @@ export default function Home() {
             className="object-cover object-center w-full transition-all duration-500 rounded-lg shadow-md cursor-pointer hover:scale-90"
             onMouseOver={() => { return document.getElementById(`project-card-${project.id}`).classList.add('scale-110'); }}
             onMouseOut={() => { return document.getElementById(`project-card-${project.id}`).classList.remove('scale-110'); }}
-            width="1920"
-            height="1080"
+            width="720"
+            height="480"
             placeholder="blur"
             blurDataURL={rgbDataURL(project.color[0], project.color[1], project.color[2])}
           >
@@ -90,7 +90,7 @@ export default function Home() {
         </h2>
         <div className="flex items-center justify-center mx-4 mt-4 text-center md:mx-24 md:justify-start">
           <div className="px-4 py-2 bg-white rounded-lg">
-            <h4 className="mr-1 text-2xl font-bold text-gray-900 md:hidden">Categories</h4>
+            <h3 className="mr-1 text-2xl font-bold text-gray-900 md:hidden">Categories</h3>
             <span className="hidden mr-1 text-2xl font-bold text-gray-900 md:inline">Categories:</span>
             <button onClick={() => { setCategory('filmmaking'); }} className={`px-4 py-2 m-1 text-white transition-all rounded-full duration-250 ${category === 'filmmaking' ? 'bg-red-500 cursor-default' : 'bg-gray-500 hover:ring-4 ring-red-500 ring-inset'}`}>Filmmaking</button>
             <button onClick={() => { setCategory('programming'); }} className={`px-4 py-2 m-1 text-white transition-all rounded-full duration-250 ${category === 'programming' ? 'bg-yellow-500 cursor-default' : 'bg-gray-500 hover:ring-4 ring-yellow-500 ring-inset'}`}>Programming</button>

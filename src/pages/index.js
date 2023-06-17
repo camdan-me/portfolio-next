@@ -88,7 +88,7 @@ export default function Home() {
       </Head>
 
       <div className={`${tick >= 3 ? 'hidden' : 'flex'} fixed z-40 transition-all bg-gray-500 duration-1000 items-center justify-center w-screen h-screen`}>
-        <Image src={logo} priority="true" alt="" className={`${tick < 1 && 'scale-0'} z-50 transition-all duration-500 fixed h-[250px] w-[250px]`} />
+        <Image src={logo} width={250} height={250} priority="true" alt="" className={`${tick < 1 && 'scale-0'} z-50 transition-all duration-500 fixed h-[250px] w-[250px]`} />
 
         <div className={`${tick >= 1 ? 'border-[500px]' : 'border-[0px]'} transition-all duration-1000 border-yellow-500 rounded-full fixed`}></div>
         <div className={`${tick >= 1 ? 'border-[500px]' : 'border-[0px]'} transition-all duration-[1500ms] border-red-500 rounded-full fixed`}></div>
@@ -105,7 +105,7 @@ export default function Home() {
         <div className={`${tick >= 4 ? 'opacity-0' : 'opacity-100'} ${tick >= 5 && 'hidden'} fixed z-50 w-screen h-screen bg-gray-500 transition-all duration-1000`}></div>
 
         <div className="z-10 flex flex-row items-center mx-4">
-          <Image src={logo} priority="true" className="w-16 h-16 sm:w-32 sm:h-32" alt="C Logo" />
+          <Image src={logo} width={128} height={128} priority="true" className="w-16 h-16 sm:w-32 sm:h-32" alt="C Logo" />
           <div className="flex flex-col ml-8">
             <h1 className="text-3xl font-black text-white sm:text-5xl">
               Hi! My name is Camdan.
