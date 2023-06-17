@@ -40,8 +40,8 @@ export default function Home() {
             className="object-cover object-center w-full transition-all duration-500 rounded-lg shadow-md cursor-pointer hover:scale-90"
             onMouseOver={() => { return document.getElementById(`project-card-${project.id}`).classList.add('scale-110'); }}
             onMouseOut={() => { return document.getElementById(`project-card-${project.id}`).classList.remove('scale-110'); }}
-            width="1920"
-            height="1080"
+            width="720"
+            height="480"
             placeholder="blur"
             blurDataURL={rgbDataURL(project.color[0], project.color[1], project.color[2])}
           >
