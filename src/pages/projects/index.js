@@ -80,7 +80,7 @@ export default function Home() {
             <button onClick={() => { setCategory('other'); }} className={`px-4 py-2 m-1 text-white transition-all rounded-full duration-250 ${category === 'other' ? 'bg-blue-500 cursor-default' : 'bg-gray-500 hover:ring-4 ring-blue-500 ring-inset'}`}>Live Events/Music</button>
           </div>
         </div>
-        <div className="flex flex-wrap items-center justify-center mx-16 text-gray-900">
+        <div className="flex flex-wrap items-center justify-center mx-4 text-gray-900 sm:mx-16">
           {getProjects()}
         </div>
       </main >
