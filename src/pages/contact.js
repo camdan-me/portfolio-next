@@ -15,7 +15,7 @@ export default function Home() {
         <title>Contact Camdan</title>
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-screen h-screen bg-gray-500 bg-topography">
+      <main className="flex flex-col items-center justify-center w-screen h-screen">
         <div className="flex flex-col items-center mx-4 lg:ml-32 sm:flex-row">
           <Image src={logo} priority="true" className="w-24 h-24 my-4 sm:w-32 sm:h-32" alt="C Logo" />
           <div className="flex flex-col sm:ml-8 sm:w-2/3 lg:w-1/2">

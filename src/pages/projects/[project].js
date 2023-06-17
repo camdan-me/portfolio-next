@@ -29,7 +29,7 @@ export default function Home({ project }) {
 				<title>Please Wait</title>
 			</Head>
 
-			<main className="flex items-center justify-center w-screen h-screen bg-gray-500 bg-signal">
+			<main className="flex items-center justify-center w-screen h-screen">
 				<div className="flex flex-col items-center mx-4 sm:flex-row">
 					<Image src={logo} priority="true" className="w-24 h-24 my-4 sm:w-32 sm:h-32" alt="C Logo" />
 					<h1 className="flex flex-col text-3xl font-black text-center text-white sm:ml-4 sm:text-left sm:text-5xl">

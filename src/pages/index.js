@@ -87,7 +87,7 @@ export default function Home() {
         <title>Camdan Mead</title>
       </Head>
 
-      <div className={`${tick >= 3 ? 'hidden' : 'flex'} fixed z-40 transition-all duration-1000 items-center justify-center w-screen h-screen bg-gray-500`}>
+      <div className={`${tick >= 3 ? 'hidden' : 'flex'} fixed z-40 transition-all bg-gray-500 duration-1000 items-center justify-center w-screen h-screen`}>
         <Image src={logo} priority="true" alt="" className={`${tick < 1 && 'scale-0'} z-50 transition-all duration-500 fixed h-[250px] w-[250px]`} />
 
         <div className={`${tick >= 1 ? 'border-[500px]' : 'border-[0px]'} transition-all duration-1000 border-yellow-500 rounded-full fixed`}></div>
@@ -119,7 +119,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div onClick={() => { return quoteClick(); }} className={`${(index === fullQuote.length) && 'cursor-pointer'} flex flex-row items-center mb-[20%] wide:mb-0 mt-4 mx-8 bg-gray-600 rounded-lg p-4 z-10`}>
+        <div onClick={() => { return quoteClick(); }} className={`${(index === fullQuote.length) ? 'cursor-pointer' : 'cursor-default'} flex flex-row items-center mb-[20%] wide:mb-0 mt-4 mx-8 bg-gray-600 rounded-lg p-4 z-10`}>
           <p className="font-semibold text-white text-m">
             &quot;{quote}&quot;
           </p>

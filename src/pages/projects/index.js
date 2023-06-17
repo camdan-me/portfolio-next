@@ -65,7 +65,7 @@ export default function Home() {
         <title>Camdan&apos;s Projects</title>
       </Head>
 
-      <main className="w-screen min-h-screen bg-gray-500">
+      <main className="w-screen min-h-screen">
         <h1 className="mt-24 text-3xl font-black text-center text-white md:mx-24 md:text-left md:text-5xl md:mt-32">My Projects</h1>
         <h2 className="mx-8 mt-2 text-xl font-bold text-center text-white md:text-left md:mx-24">
           I&apos;ve made all sorts of things, and I collect most of them here. This isn&apos;t an exhaustive list, but it&apos;s a good start.<br />
@@ -80,7 +80,7 @@ export default function Home() {
             <button onClick={() => { setCategory('other'); }} className={`px-4 py-2 m-1 text-white transition-all rounded-full duration-250 ${category === 'other' ? 'bg-blue-500 cursor-default' : 'bg-gray-500 hover:ring-4 ring-blue-500 ring-inset'}`}>Live Events/Music</button>
           </div>
         </div>
-        <div className="flex flex-wrap items-center justify-center m-16 mt-0 text-gray-900">
+        <div className="flex flex-wrap items-center justify-center mx-4 text-gray-900 sm:mx-16">
           {getProjects()}
         </div>
       </main >
