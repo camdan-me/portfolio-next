@@ -8,6 +8,7 @@
 		"cta": "Watch Now",
 		"link": "https://youtu.be/RYQR55FOKoY",
 		"type": "Demo Reel",
+		"color": [175, 128, 100],
 		"category": "filmmaking"
 	},
 	{
@@ -19,6 +20,7 @@
 		"cta": "Watch Now",
 		"link": "https://youtu.be/dD2AjOZ4CFI",
 		"type": "Video",
+		"color": [57, 50, 50],
 		"category": "filmmaking"
 	},
 	{
@@ -30,6 +32,7 @@
 		"cta": "Watch Now",
 		"link": "https://youtu.be/zASit_6FJlI",
 		"type": "Music Video",
+		"color": [137, 127, 140],
 		"category": "filmmaking"
 	},
 	{
@@ -41,6 +44,7 @@
 		"cta": "Watch Now",
 		"link": "https://twitter.com/hackclub/status/1655564401280262144",
 		"type": "Trailer",
+		"color": [180, 157, 173],
 		"category": "filmmaking"
 	},
 	{
@@ -52,6 +56,7 @@
 		"cta": "Watch Now",
 		"link": "https://youtu.be/JhNGlht7zzE",
 		"type": "Video",
+		"color": [123, 114, 111],
 		"category": "filmmaking"
 	},
 	{
@@ -63,6 +68,7 @@
 		"cta": "Watch Now",
 		"link": "https://youtu.be/y6U4K123BXA",
 		"type": "Video",
+		"color": [92, 104, 108],
 		"category": "filmmaking"
 	},
 	{
@@ -74,6 +80,7 @@
 		"cta": "Watch Now",
 		"link": "https://youtu.be/T2PkVv9sxfQ",
 		"type": "Video",
+		"color": [100, 90, 79],
 		"category": "filmmaking"
 	},
 	{
@@ -85,6 +92,7 @@
 		"cta": "Coming Soon",
 		"link": "",
 		"type": "Video",
+		"color": [43, 23, 26],
 		"category": "filmmaking"
 	},
 	{
@@ -96,6 +104,7 @@
 		"cta": "Check out the Code",
 		"link": "https://github.com/camdan-me/portfolio-next",
 		"type": "Website",
+		"color": [17, 17, 17],
 		"category": "programming"
 	},
 	{
@@ -107,6 +116,7 @@
 		"cta": "Check out the Code",
 		"link": "https://github.com/camdan-me/birthday",
 		"type": "Website",
+		"color": [17, 17, 17],
 		"category": "programming"
 	},
 	{
@@ -118,6 +128,7 @@
 		"cta": "Check out the Code",
 		"link": "https://github.com/camdan-me/business-card",
 		"type": "NPM Package",
+		"color": [17, 17, 17],
 		"category": "programming"
 	},
 	{
@@ -129,6 +140,7 @@
 		"cta": "Play Chess",
 		"link": "https://github.com/camdan-me",
 		"type": "GitHub Profile",
+		"color": [17, 17, 17],
 		"category": "programming"
 	},
 	{
@@ -140,6 +152,7 @@
 		"cta": "Coming Soon",
 		"link": "",
 		"type": "Live Event",
+		"color": [27, 18, 17],
 		"category": "other"
 	},
 	{
@@ -151,6 +164,7 @@
 		"cta": "Watch Now",
 		"link": "https://youtu.be/r8NSgfzNl_4",
 		"type": "Light Show",
+		"color": [25, 50, 128],
 		"category": "other"
 	},
 	{
@@ -162,6 +176,7 @@
 		"cta": "Listen Now",
 		"link": "https://youtu.be/HnVdXDTH11U",
 		"type": "Music Remix",
+		"color": [47, 48, 50],
 		"category": "other"
 	},
 	{
@@ -173,6 +188,7 @@
 		"cta": "Listen Now",
 		"link": "https://youtu.be/xAne7GIvXO8",
 		"type": "Music Remix",
+		"color": [47, 48, 50],
 		"category": "other"
 	},
 	{
@@ -184,6 +200,7 @@
 		"cta": "Listen Now",
 		"link": "https://youtu.be/IBGJo7ANbbg",
 		"type": "Ambisonic Remix",
+		"color": [68, 83, 99],
 		"category": "other"
 	},
 	{
@@ -195,6 +212,7 @@
 		"cta": "Listen Now",
 		"link": "https://youtu.be/tM_bSRBljmQ",
 		"type": "Ambisonic Remix",
+		"color": [68, 83, 99],
 		"category": "other"
 	},
 	{
@@ -206,6 +224,7 @@
 		"cta": "Listen Now",
 		"link": "https://youtu.be/kTTKqQPeH3E",
 		"type": "Music Mix",
+		"color": [109, 95, 95],
 		"category": "other"
 	}
 ]
