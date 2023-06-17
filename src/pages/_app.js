@@ -69,7 +69,7 @@ export default function App({ Component, pageProps }) {
       <div className="overflow-x-hidden">
         <Navbar />
 
-        <div className='fixed w-screen h-screen overflow-hidden bg-gray-500 -z-50'></div>
+        <div className={`fixed w-screen h-screen overflow-hidden bg-gray-500 -z-50 ${(router.pathname !== '/') && 'bg-signal'}`}></div>
 
         <div
           className={cn({
