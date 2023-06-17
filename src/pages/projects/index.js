@@ -34,7 +34,7 @@ export default function Home() {
         <div key={project.id} className="grid w-full mx-4 my-8 md:w-[45%] lg:w-[30%]">
           <Image
             id={`project-image-${project.id}`}
-            src={`https://cdn.camdan.me/projects/${project.id}.jpg`}
+            src={`https://cdn.camdan.me/projects/${project.category}/${project.id}.jpg`}
             alt={`${project.title} Image`}
             onClick={() => { return window.open(`/projects/${project.id}`, '_blank'); }}
             className="object-cover object-center w-full transition-all duration-500 rounded-lg shadow-md cursor-pointer hover:scale-90"
