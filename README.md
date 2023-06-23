@@ -4,6 +4,8 @@
 ![website status](https://img.shields.io/website?label=website%20status&style=flat-square&url=https%3A%2F%2Fcamdan.me)
 ![last commit](https://img.shields.io/github/last-commit/camdan-me/portfolio-next?style=flat-square)
 
+---
+
 # 👋 Welcome!
 This is the repo that **powers my [personal website](https://camdan.me/)**. While previous iterations were closed-source, when I recently rewrote everything in [Next.js](https://nextjs.org/) I decided to open-source everything as well.
 > This is a living project. It's not perfect or complete. I keep updating it and working on it regularly.
@@ -29,5 +31,6 @@ Once everything is done, you can access the site at [localhost:3000](http://loca
 ## Getting in Touch
 If you want to reach out to me, visit the [contact page on my website](https://camdan.me/contact). I'd love to hear from you!
 
-## Copyright
+---
+
 **Copyright 2023 Camdan Mead - All Rights Reserved**
