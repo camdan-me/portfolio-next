@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 
 import Link from 'next/link';
 
-const env = process.env.NEXT_PUBLIC_VERCEL_ENV ? process.env.VERCEL_ENV : 'local';
+const env = process.env.NEXT_PUBLIC_VERCEL_ENV ?? 'local';
 const sha = process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA ?? '0000000';
 const commit = process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_MESSAGE ?? '🔃 unstaged changes';
 const author = process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_AUTHOR_NAME ?? 'John Doe';
