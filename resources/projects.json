@@ -98,7 +98,7 @@
 	{
 		"id": "portfolio",
 		"title": "Personal Portfolio",
-		"description": "This entire portfolio website is 100% custom, written using NextJS and TailwindCSS. It's a great example of my web development skills.",
+		"description": "This entire portfolio website is 100% custom, written using Next and Tailwind and hosted on Vercel. It's a great example of my web development skills.",
 		"status": "Completed",
 		"role": "Creator",
 		"cta": "Check out the Code",
