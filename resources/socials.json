@@ -1,0 +1,34 @@
+[
+	{
+		"id": "youtube",
+		"link": "https://youtube.com/@camdan-me"
+	},
+	{
+		"id": "github",
+		"link": "https://github.com/camdan-me"
+	},
+	{
+		"id": "whatsapp",
+		"link": "https://api.whatsapp.com/send?phone=13039998067"
+	},
+	{
+		"id": "twitter",
+		"link": "https://twitter.com/camdan_me"
+	},
+	{
+		"id": "linkedin",
+		"link": "https://linkedin.com/in/camdan-me"
+	},
+	{
+		"id": "bluesky",
+		"link": "https://bsky.app/profile/camdan.me"
+	},
+	{
+		"id": "discord",
+		"link": "https://discord.com/users/564859369951461406"
+	},
+	{
+		"id": "snapchat",
+		"link": "https://snapchat.com/add/camdan.me"
+	}
+]
