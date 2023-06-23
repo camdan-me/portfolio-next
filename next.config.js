@@ -6,6 +6,11 @@ module.exports = {
   async redirects() {
     return [
       {
+        source: '/socials',
+        destination: '/contact',
+        permanent: false,
+      },
+      {
         source: '/donate',
         destination: 'https://donate.stripe.com/7sI14mgl29wV0ve3cd',
         permanent: false,
