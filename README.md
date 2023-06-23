@@ -27,14 +27,7 @@ npm run build
 npm start
 ```
 
-Once everything is done, you can access the site at http://localhost:3000
-
-### Other Projects
-I have a bit of a network of personal websites, collected below:
-- [birthday.camdan.me](https://birthday.camdan.me/example) How I celebrate birthdays. [View Repo](https://github.com/camdan-me/birthday)
-- [cdn.camdan.me](https://cdn.camdan.me) Where I host any long-term public files. [View Repo](https://github.com/camdan-me/cdn)
-- [haste.camdan.me](https://haste.camdan.me) My implementation of [HasteBin](https://github.com/toptal/haste-server). Only sort of maintained.
-> More are coming soon, I have lots of stuff in the works.
+Once everything is done, you can access the site at [localhost:3000](http://localhost:3000)!
 
 ### Getting in Touch
 If you want to reach out to me, visit the [contact page on my website](https://camdan.me/contact). I'd love to hear from you!
