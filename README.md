@@ -17,6 +17,18 @@ As you review this repository, please keep the following in mind:
 ### Development Flow
 Everything on the `main` branch of this repository is automatically deployed via [Vercel](https://vercel.com) to [camdan.me](https://camdan.me). I do all of my work in the `development` branch, which is also automatically deployed to [beta.camdan.me](https://beta.camdan.me) though not accessible to the public. When new features or critical bug fixes are ready, I simply merge them in to `main` with a pull request.
 
+### Local Setup
+If you want to run this locally, it's very simple. Install [Git](https://git-scm.com/download) and [Node](https://git-scm.com/download), then run the below commands:
+```cmd
+git clone https://github.com/camdan-me/portfolio-next.git
+cd portfolio-next
+npm install
+npm run build
+npm start
+```
+
+Once everything is done, you can access the site at http://localhost:3000
+
 ### Other Projects
 I have a bit of a network of personal websites, collected below:
 - [birthday.camdan.me](https://birthday.camdan.me/example) How I celebrate birthdays. [View Repo](https://github.com/camdan-me/birthday)
