@@ -146,11 +146,11 @@
 	{
 		"id": "tedxwarrentech",
 		"title": "TEDxWarrenTech",
-		"description": "I was the lead organizer for the first ever TEDxWarrenTech event, which happened on April 15, 2023. The videos will be released soon!",
-		"status": "Postproduction",
+		"description": "I was the lead organizer for the first ever TEDxWarrenTech event, which happened on April 15, 2023. In addition to my organization roles, I also designed and implemented all of our tech systems, including the website and multicam broadcast setup.",
+		"status": "Completed",
 		"role": "Lead Organizer",
-		"cta": "Coming Soon",
-		"link": "",
+		"cta": "Watch Now",
+		"link": "https://www.youtube.com/watch?list=PLpvBYLLNd5MLc9XbP5HmK_hbsTmtbwX4a",
 		"type": "Live Event",
 		"color": [27, 18, 17],
 		"category": "other"
