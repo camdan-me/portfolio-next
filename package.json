@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "classnames": "^2.3.2",
-    "eslint": "8.44.0",
-    "eslint-config-next": "13.4.7",
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.19",
     "mixpanel-browser": "^2.47.0",
     "next": "13.4.10",
     "react": "18.2.0",
@@ -21,6 +21,6 @@
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.25",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.3"
   }
 }
