@@ -12,6 +12,18 @@
 		"category": "filmmaking"
 	},
 	{
+		"id": "itstime",
+		"title": "It's Time",
+		"description": "It's Time is an environmental short film I've been working on since 2021. It's a call to action to save our planet and a passion project of mine.",
+		"status": "Awaiting Release",
+		"role": "Writer/Director",
+		"cta": "Watch Trailer",
+		"link": "https://youtu.be/GAjfK3SFf9c",
+		"type": "Video",
+		"color": [43, 23, 26],
+		"category": "filmmaking"
+	},
+	{
 		"id": "undecided",
 		"title": "Undecided",
 		"description": "Undecided is an award-winning short film I created with a few friends that looks at the struggle of the college search.",
@@ -81,18 +93,6 @@
 		"link": "https://youtu.be/T2PkVv9sxfQ",
 		"type": "Video",
 		"color": [100, 90, 79],
-		"category": "filmmaking"
-	},
-	{
-		"id": "itstime",
-		"title": "It's Time",
-		"description": "It's Time is an environmental short film I've been working on since 2021. It's a call to action to save our planet and a passion project of mine.",
-		"status": "Postproduction",
-		"role": "Writer/Director",
-		"cta": "Coming Soon",
-		"link": "",
-		"type": "Video",
-		"color": [43, 23, 26],
 		"category": "filmmaking"
 	},
 	{
