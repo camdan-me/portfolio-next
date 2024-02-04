@@ -113,7 +113,8 @@ export default function Home() {
             <h2 className="mt-2 font-medium text-white text-m sm:text-xl">
               I like to make technology do cool stuff. I&apos;m particularly good at fixing things that are broken.
               <span className="hidden sm:flex">
-                Sometimes I make websites, music, videos, music videos, cool lights, or concerts.
+                Sometimes I make websites, music, videos, music videos, cool lights, or concerts.<br />
+                I&apos;m currently studying Integrated Design Engineering at CU Boulder.
               </span>
             </h2>
           </div>
