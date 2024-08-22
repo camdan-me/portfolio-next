@@ -23,7 +23,7 @@ export default function Home({ social }) {
 	return (
 		<>
 			<Head>
-				<UniversalHead description="I like to make technology do cool stuff. I'm particularly good at fixing things that are broken. Sometimes I make websites, music, videos, music videos, cool lights, or concerts." />
+				<UniversalHead description="I'm an entertainment professional based out of Denver who specializes in lighting design and live video production." />
 
 				<title>Please Wait</title>
 			</Head>

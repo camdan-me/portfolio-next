@@ -17,7 +17,7 @@ export default function Footer() {
 	return (
 		<>
 			<div className={'content-center w-screen px-8 py-4 font-black text-center text-white'}>
-				Copyright 2023 Camdan Mead - All Rights Reserved
+				Copyright 2024 Camdan Mead - All Rights Reserved
 				<div className="mt-1 text-xs text-gray-100">
 					<Link href={`https://github.com/camdan-me/portfolio-next/commit/${sha}`} target="_blank">{displayEnv} build {sha.substring(0, 7)} - {commit} ({author})</Link>
 				</div>

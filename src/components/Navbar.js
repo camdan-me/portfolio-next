@@ -16,7 +16,6 @@ export default function Navbar() {
 				<Link href="/about" className={`${router.asPath.startsWith('/about') ? 'text-red-500 cursor-default' : 'link-underline'} mx-2`}>About</Link>
 				<Link href="/projects" className={`${router.asPath.startsWith('/projects') ? 'text-yellow-500 cursor-default' : 'link-underline'} mx-2`}>Projects</Link>
 				<Link href="/contact" className={`${router.asPath.startsWith('/contact') ? 'text-blue-500 cursor-default' : 'link-underline'} mx-2`}>Contact</Link>
-				<Link href="/newsletter" className={`${router.asPath.startsWith('/newsletter') ? 'text-red-500 cursor-default' : 'link-underline'} mx-2`}>Newsletter</Link>
 			</nav>
 
 			<div className="fixed z-50 items-center justify-center hidden w-screen h-screen p-4 font-black text-center text-white bg-gray-500 tiny:flex">

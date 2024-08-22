@@ -14,7 +14,7 @@ This is the repo that **powers my [personal website](https://camdan.me/)**. Whil
 **This is a personal website.** The entire point is it showcases me. While I love ideas and input, this isn't the place for them- this is supposed to reflect me, not those around me. With that said, if you find a typo, bug, or usability issue please do [open an issue](https://github.com/camdan-me/portfolio-next/issues/new) to let me know.
 
 ## Development Flow
-Everything on the `main` branch of this repository is automatically deployed via [Vercel](https://vercel.com) to [camdan.me](https://camdan.me). I do all of my work in the `development` branch, which is also automatically deployed to [beta.camdan.me](https://beta.camdan.me). When new features or critical bug fixes are ready, I simply merge them in to `main` with a pull request.
+Everything on the `main` branch of this repository is automatically deployed via [Vercel](https://vercel.com) to [camdan.me](https://camdan.me).
 
 ## Local Setup
 If you want to run this locally, it's very simple. Install [Git](https://git-scm.com/download) and [Node](https://git-scm.com/download), then run the below commands:

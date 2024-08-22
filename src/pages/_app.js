@@ -6,7 +6,6 @@ import { Baloo_2 } from 'next/font/google';
 import Script from 'next/script';
 
 import cn from 'classnames';
-import mixpanel from 'mixpanel-browser';
 
 import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
@@ -21,8 +20,6 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
   const prevScreen = useRef(Component); // the previous displayed page, used for transitions
   const [transitioning, setTransitioning] = useState(false); // whether or not the page is transitioning
-
-  mixpanel.init('0888b8e1959e15a7eb39b01c6d5c055e', { debug: true }); // connect to mixpanel
 
   useEffect(() => {
     if (!prefersReducedMotion(window)) {
@@ -47,8 +44,6 @@ export default function App({ Component, pageProps }) {
 
     // analytics tracking
     router.events.on('routeChangeComplete', (url) => {
-      mixpanel.track('Page View', { url });
-
       window.gtag('config', 'G-VT4FYXXHKH', {
         page_path: url,
       });

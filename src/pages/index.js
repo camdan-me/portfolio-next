@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import UniversalHead from '../components/UniversalHead.js';
 
@@ -11,50 +12,10 @@ import sleep from '../functions/sleep.js';
 
 import logo from '../../public/assets/img/transparent-logo.png';
 
-import quoteArray from '../../resources/quotes.json';
-
-// pick a random quote from the array
-const selectQuote = () => {
-  return quoteArray.quotes[
-    Math.floor(Math.random() * quoteArray.quotes.length)
-  ];
-};
-
 export default function Home() {
-  const [fullQuote, setFullQuote] = useState(selectQuote()); // current quote in its intirety
-  const [quote, setQuote] = useState(''); // current quote being displayed
-  const [index, setIndex] = useState(0); // current index of the quote, representing how much of it is typed out
   const [tick, setTick] = useState(0); // current tick of the intro animation
 
   const router = useRouter();
-
-  // when the quote element is clicked, pick a new quote
-  const quoteClick = () => {
-    if (index !== fullQuote.length) return;
-
-    setQuote('');
-    setIndex(0);
-    setFullQuote(selectQuote());
-  };
-
-  useEffect(() => {
-    // if the browser prefers reduced motion, fill in the quote instantly
-    if (prefersReducedMotion(window)) {
-      setQuote(fullQuote);
-      setIndex(fullQuote.length);
-      return;
-    }
-
-    // if the quote is not fully typed out, add a letter to it
-    if (index !== fullQuote.length) {
-      setTimeout(() => {
-        if (tick >= 4) {
-          setQuote(quote + fullQuote[index]);
-          setIndex(index + 1);
-        }
-      }, 40);
-    }
-  }, [index, quote, fullQuote, tick]);
 
   // run the intro animation
   useEffect(() => {
@@ -83,7 +44,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <UniversalHead description="I like to make technology do cool stuff. I'm particularly good at fixing things that are broken. Sometimes I make websites, music, videos, music videos, cool lights, or concerts." />
+        <UniversalHead description="I'm an entertainment professional based out of Denver who specializes in lighting design and live video production." />
         <title>Camdan Mead</title>
       </Head>
 
@@ -104,26 +65,17 @@ export default function Home() {
       <main className={`${tick < 3 && 'hidden'} bg-gray-500 bg-circuit flex flex-col items-center justify-center w-screen h-screen`}>
         <div className={`${tick >= 4 ? 'opacity-0' : 'opacity-100'} ${tick >= 5 && 'hidden'} fixed z-50 w-screen h-screen bg-gray-500 transition-all duration-1000`}></div>
 
-        <div className="z-10 flex flex-row items-center mx-4">
+        <div className="z-10 flex flex-row items-center mx-4 mb-[20%] wide:mb-0">
           <Image src={logo} width={128} height={128} priority="true" className="w-16 h-16 sm:w-32 sm:h-32" alt="C Logo" />
           <div className="flex flex-col ml-8">
             <h1 className="text-3xl font-black text-white sm:text-5xl">
-              Hi! My name is Camdan.
+              Hi! I'm Cam.
             </h1>
             <h2 className="mt-2 font-medium text-white text-m sm:text-xl">
-              I like to make technology do cool stuff. I&apos;m particularly good at fixing things that are broken.
-              <span className="hidden sm:flex">
-                Sometimes I make websites, music, videos, music videos, cool lights, or concerts.<br />
-                I&apos;m currently studying Integrated Design Engineering at CU Boulder.
-              </span>
+              I'm an entertainment professional based out of Denver who specializes in lighting design and live video production.<br />
+              Currently studying <Link href="https://www.colorado.edu/program/ide" className="link-underline">Integrated Design Engineering</Link> at CU Boulder, among other things.
             </h2>
           </div>
-        </div>
-
-        <div onClick={() => { return quoteClick(); }} className={`${(index === fullQuote.length) ? 'cursor-pointer' : 'cursor-default'} flex flex-row items-center mb-[20%] wide:mb-0 mt-4 mx-8 bg-gray-600 rounded-lg p-4 z-10`}>
-          <p className="font-semibold text-white text-m">
-            &quot;{quote}&quot;
-          </p>
         </div>
 
         <svg className="absolute bottom-0 w-screen wide:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 400">
