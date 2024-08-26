@@ -23,7 +23,7 @@ export default function Home() {
               Have a <span className="text-red-500">question,</span> <span className="text-blue-500">comment,</span> or <span className="text-yellow-500">project idea?</span> I&apos;d love to speak with you!
             </h1>
             <h2 className="mt-2 font-bold text-center text-white text-l sm:text-2xl sm:text-left">
-              Please feel free to contact me via <Link href="mailto:hello@camdan.me" className="link-underline">email</Link>, <Link href="tel:3039998067" className="link-underline">text</Link>, <Link href="tel:3039998067" className="link-underline">phone</Link>, or <Link href="/about" className="link-underline">social media</Link>. I'm best reached in the afternoons, and do my best to reply quickly!<br />
+              Please feel free to contact me via <Link href="mailto:hello@camdan.me" className="link-underline">email</Link>, <Link href="tel:3039998067" className="link-underline">text</Link>, <Link href="tel:3039998067" className="link-underline">phone</Link>, or <Link href="/about" className="link-underline">social media</Link>. I&apos;m best reached in the afternoons, and do my best to reply quickly!<br />
               <br />
               If you&apos;d like to work with me, you can reach out for my schedule and rates, and check out my <Link href="/projects" className="underline">projects</Link> to see what I&apos;ve done before.
               <div className="flex flex-row justify-center mt-8 sm:justify-start">

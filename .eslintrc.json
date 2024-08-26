@@ -77,7 +77,6 @@
     "no-trailing-spaces": [
       "error"
     ],
-    "react/no-unescaped-entities": "off",
     "no-var": "error",
     "object-curly-spacing": [
       "error",

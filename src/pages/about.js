@@ -26,7 +26,7 @@ export default function Home() {
               My skillset is a mix of lighting design, video production, software development,
               and electrical engineering with a little audio work thrown in.<br />
               <br />
-              I&apos;m currently working as a videographer and LD in Denver and Boulder. Interested in working with me? Please feel free to <Link href="/contact" className="underline">reach out</Link>, I'd love to hear from you!<br />
+              I&apos;m currently working as a videographer and LD in Denver and Boulder. Interested in working with me? Please feel free to <Link href="/contact" className="underline">reach out</Link>, I&apos;d love to hear from you!<br />
               <div className="flex flex-row justify-center mt-8 sm:-ml-2 sm:justify-start">
                 <Link href="/socials/youtube" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-12 sm:w-16 fill-white hover:opacity-50" viewBox="0 0 64 64"><path d="M53.527,17.427C55.714,19.677,56,23.252,56,32s-0.286,12.323-2.473,14.573C51.34,48.822,49.062,49,32,49	s-19.34-0.178-21.527-2.427C8.286,44.323,8,40.748,8,32s0.286-12.323,2.473-14.573S14.938,15,32,15S51.34,15.178,53.527,17.427z M27.95,39.417l12.146-7.038L27.95,25.451V39.417z"></path></svg>

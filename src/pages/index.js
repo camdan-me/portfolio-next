@@ -69,10 +69,10 @@ export default function Home() {
           <Image src={logo} width={128} height={128} priority="true" className="w-16 h-16 sm:w-32 sm:h-32" alt="C Logo" />
           <div className="flex flex-col ml-8">
             <h1 className="text-3xl font-black text-white sm:text-5xl">
-              Hi! I'm Cam.
+              Hi! I&apos;m Cam.
             </h1>
             <h2 className="mt-2 font-medium text-white text-m sm:text-xl">
-              I'm an entertainment professional based out of Denver who specializes in lighting design and live video production.<br />
+              I&apos;m an entertainment professional based out of Denver who specializes in lighting design and live video production.<br />
               Currently studying <Link href="https://www.colorado.edu/program/ide" className="link-underline">Integrated Design Engineering</Link> at CU Boulder, among other things.
             </h2>
           </div>
