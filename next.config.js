@@ -11,6 +11,11 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/billing',
+        destination: '/redirect?link=https://billing.camdan.me/',
+        permanent: false,
+      },
+      {
         source: '/vcard',
         destination: 'https://cdn.camdan.me/logos/vcard.vcf',
         permanent: false,
