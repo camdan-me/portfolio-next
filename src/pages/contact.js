@@ -35,8 +35,6 @@ export default function Home() {
                   (303) 999-8067
                 </Link>
               </div>
-              <br />
-              <span className="text-sm italic text-gray-50">If you&apos;re trying to view/pay invoices or manage your billing, <Link href="/billing" className="underline" target="_blank">click here</Link>.</span>
             </h2>
           </div>
         </div>
