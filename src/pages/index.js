@@ -72,7 +72,7 @@ export default function Home() {
               Hi! I&apos;m Cam.
             </h1>
             <h2 className="mt-2 font-medium text-center text-white sm:text-left text-m sm:text-xl">
-              I&apos;m an entertainment professional based out of Denver who specializes in lighting design and live video production. Currently studying <Link href="https://www.colorado.edu/program/ide" className="link-underline">Integrated Design Engineering</Link> at CU Boulder, among other things.
+              I&apos;m an entertainment professional based out of Denver who specializes in lighting design and live video production. Currently studying <Link href="https://www.colorado.edu/program/ide" target="_blank" className="link-underline">Integrated Design Engineering</Link> at CU Boulder and running <Link href="https://ionentertainment.co" target="_blank" className="link-underline">Ion Entertainment</Link>.
             </h2>
           </div>
         </div>

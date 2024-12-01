@@ -25,7 +25,7 @@ export default function Home() {
             <h2 className="mt-2 font-bold text-center text-white text-l sm:text-2xl sm:text-left">
               If you&apos;re looking for lighting design or VJ services please visit <Link href="https://ionentertainment.co/" target="_blank" className="link-underline">Ion Entertainment</Link>, my lighting design company.<br />
               <br />
-              If you have a question or comment about Fidgetable, you can get in touch through <Link href="https://fidgetable.camdan.me/contact" target="_blank" className="link-underline">Fidgetable&apos;s website</Link>.<br />
+              If you have a question or comment about <Link href="https://figetable.camdan.me/" target="_blank" className="link-underline">Fidgetable</Link>, you can get in touch through <Link href="https://fidgetable.camdan.me/contact" target="_blank" className="link-underline">Fidgetable&apos;s website</Link>.<br />
               <br />
               For anything else, though, feel free to reach out below or through <Link href="/about" className="link-underline">social media</Link>!<br />
               <div className="flex flex-row justify-center mt-8 sm:justify-start">
