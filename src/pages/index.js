@@ -65,15 +65,14 @@ export default function Home() {
       <main className={`${tick < 3 && 'hidden'} bg-gray-500 bg-circuit flex flex-col items-center justify-center w-screen h-screen`}>
         <div className={`${tick >= 4 ? 'opacity-0' : 'opacity-100'} ${tick >= 5 && 'hidden'} fixed z-50 w-screen h-screen bg-gray-500 transition-all duration-1000`}></div>
 
-        <div className="z-10 flex flex-row items-center mx-4 mb-[20%] wide:mb-0">
-          <Image src={logo} width={128} height={128} priority="true" className="w-16 h-16 sm:w-32 sm:h-32" alt="C Logo" />
-          <div className="flex flex-col ml-8">
-            <h1 className="text-3xl font-black text-white sm:text-5xl">
+        <div className="z-10 flex flex-col sm:flex-row items-center mx-4 lg:ml-[15%] mb-[20%] wide:mb-0">
+          <Image src={logo} width={128} height={128} priority="true" className="w-24 h-24 sm:w-32 sm:h-32" alt="C Logo" />
+          <div className="flex flex-col mt-4 ml-8 sm:mt-0">
+            <h1 className="text-3xl font-black text-center text-white sm:text-left sm:text-5xl">
               Hi! I&apos;m Cam.
             </h1>
-            <h2 className="mt-2 font-medium text-white text-m sm:text-xl">
-              I&apos;m an entertainment professional based out of Denver who specializes in lighting design and live video production.<br />
-              Currently studying <Link href="https://www.colorado.edu/program/ide" className="link-underline">Integrated Design Engineering</Link> at CU Boulder, among other things.
+            <h2 className="mt-2 font-medium text-center text-white sm:text-left text-m sm:text-xl">
+              I&apos;m an entertainment professional based out of Denver who specializes in lighting design and live video production. Currently studying <Link href="https://www.colorado.edu/program/ide" className="link-underline">Integrated Design Engineering</Link> at CU Boulder, among other things.
             </h2>
           </div>
         </div>
