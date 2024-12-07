@@ -18,7 +18,9 @@ export default function Footer() {
 		<>
 			<div className={'content-center w-screen px-8 py-4 font-black text-center text-white'}>
 				Copyright 2024 Camdan Mead - All Rights Reserved
-				<div className="mt-1 text-xs text-gray-100">
+				<div className="mt-1 text-xs leading-relaxed text-gray-100">
+					Built using <Link href="https://nextjs.org">Next</Link> and <Link href="https://tailwindcss.com">Tailwind</Link>. Powered by <Link href="https://vercel.com/">Vercel</Link>. Source code available on <Link href="https://github.com/camdan-me/portfolio-next/">GitHub</Link>.<br />
+
 					<Link href={`https://github.com/camdan-me/portfolio-next/commit/${sha}`} target="_blank">{displayEnv} build {sha.substring(0, 7)} - {commit} ({author})</Link>
 				</div>
 			</div >
