@@ -10,6 +10,8 @@ const author = process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_AUTHOR_NAME ?? 'John Do
 const displayEnv = env.charAt(0)
 	.toUpperCase() + env.slice(1);
 
+const date = new Date();
+
 export default function Footer() {
 	const router = useRouter();
 
@@ -17,7 +19,7 @@ export default function Footer() {
 	return (
 		<>
 			<div className={'content-center w-screen px-8 py-4 font-black text-center text-white'}>
-				Copyright 2024 Camdan Mead - All Rights Reserved
+				&copy; {date.getFullYear()} Camdan Mead - All Rights Reserved
 				<div className="mt-1 text-xs leading-relaxed text-gray-100">
 					Built using <Link href="https://nextjs.org">Next</Link> and <Link href="https://tailwindcss.com">Tailwind</Link>. Powered by <Link href="https://vercel.com/">Vercel</Link>. Source code available on <Link href="https://github.com/camdan-me/portfolio-next/">GitHub</Link>.<br />
 

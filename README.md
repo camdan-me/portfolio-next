@@ -33,4 +33,4 @@ If you want to reach out to me, visit the [contact page on my website](https://c
 
 ---
 
-**Copyright 2023 Camdan Mead - All Rights Reserved**
+**Copyright 2025 Camdan Mead - All Rights Reserved**
